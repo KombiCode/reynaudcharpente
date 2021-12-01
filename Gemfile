@@ -59,6 +59,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # Detect N+1 queries
+  gem 'bullet'
 end
 
 group :test do
@@ -72,3 +75,5 @@ end
 gem 'sorcery'
 # Friendly ID
 gem 'friendly_id', '~> 5.4.0'
+
+gem 'strong_migrations', '~> 0.7.6'
