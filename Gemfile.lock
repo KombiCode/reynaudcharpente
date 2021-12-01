@@ -66,6 +66,9 @@ GEM
     bootsnap (1.9.3)
       msgpack (~> 1.0)
     builder (3.2.4)
+    bullet (6.1.5)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     capybara (3.36.0)
       addressable
       matrix
@@ -203,11 +206,14 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (0.7.3)
       rails (>= 6.0.0)
+    strong_migrations (0.7.8)
+      activerecord (>= 5)
     thor (1.1.0)
     turbo-rails (0.9.0)
       rails (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    uniform_notifier (1.14.2)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -230,6 +236,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
+  bullet
   capybara (>= 3.26)
   cssbundling-rails (>= 0.1.0)
   debug (>= 1.0.0)
@@ -243,6 +250,7 @@ DEPENDENCIES
   selenium-webdriver
   sorcery
   stimulus-rails (>= 0.4.0)
+  strong_migrations (~> 0.7.6)
   turbo-rails (>= 0.7.11)
   tzinfo-data
   web-console (>= 4.1.0)
