@@ -61,7 +61,8 @@ group :development do
   # gem "spring"
 
   # Detect N+1 queries
-  gem 'bullet'
+  ## Commented out on 2021-12-01 as not yet supporting active_record 7.0.0.alpha2
+  ## gem 'bullet'
 end
 
 group :test do

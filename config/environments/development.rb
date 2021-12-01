@@ -66,9 +66,10 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   # https://github.com/flyerhzm/bullet#configuration
-  config.after_initialize do
-    Bullet.enable = true
-    Bullet.alert = true
-  end
+  ## Commented out on 2021-12-01 as not yet supporting active_record 7.0.0.alpha2
+  # config.after_initialize do
+  #   Bullet.enable = true
+  #   Bullet.alert = true
+  # end
 
 end
