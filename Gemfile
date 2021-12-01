@@ -70,3 +70,5 @@ end
 
 # Use sorcery for authentication
 gem 'sorcery'
+# Friendly ID
+gem 'friendly_id', '~> 5.4.0'
