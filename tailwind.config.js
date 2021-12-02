@@ -12,6 +12,9 @@ module.exports = {
         brandYellow: "#eacd26",
         brandBrown: "#4c1212",
       },
+      fontFamily: {
+        akaya: "Akaya Telivigala",
+      }
     },
   }
 }
