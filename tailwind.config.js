@@ -14,6 +14,7 @@ module.exports = {
       },
       fontFamily: {
         akaya: "Akaya Telivigala",
+        adventpro: ["AdventPro", "sans-serif"],
       }
     },
   }
