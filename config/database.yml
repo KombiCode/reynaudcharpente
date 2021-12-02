@@ -84,3 +84,9 @@ production:
   database: reynaudcharpente_production
   username: reynaudcharpente
   password: <%= ENV["REYNAUDCHARPENTE_DATABASE_PASSWORD"] %>
+
+staging:
+  <<: *default
+  database: reynaudcharpente_staging
+  username: reynaudcharpente
+  password: <%= ENV["REYNAUDCHARPENTE_DATABASE_PASSWORD"] %>
