@@ -11,7 +11,8 @@
     "esbuild": "^0.14.1",
     "mrujs": "^0.7.2",
     "postcss": "^8.4.4",
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^2.2.19",
+    "tailwindcss-stimulus-components": "^3.0.1"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds",

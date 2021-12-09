@@ -6,5 +6,5 @@ import { application } from "./application"
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
 
-import ModalController from "./modal_controller.js"
-application.register("modal", ModalController)
+import ExtendedModalController from "./extended_modal_controller.js"
+application.register("extended-modal", ExtendedModalController)  
