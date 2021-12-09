@@ -5,6 +5,7 @@
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo-rails": "^7.1.0",
     "@rails/actioncable": "^6.1.4-1",
+    "@tailwindcss/forms": "^0.3.4",
     "autoprefixer": "^10.4.0",
     "cable_ready": "^5.0.0-pre8",
     "esbuild": "^0.14.1",

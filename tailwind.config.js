@@ -5,6 +5,9 @@ module.exports = {
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js'
   ],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
   theme: {
     extend: {
       colors: {
@@ -19,5 +22,3 @@ module.exports = {
     },
   }
 }
-
-
