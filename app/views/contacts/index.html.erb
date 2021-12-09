@@ -1,0 +1,11 @@
+<div class="max-w-3xl mx-auto mt-8">
+  <div data-controller="modal" class="flex items-baseline justify-between mb-6">
+    <h1 class="text-3xl text-gray-900">Contacts</h1>
+    <%= link_to 'Nouveau Contact', new_contact_path, class: "text-blue-600", data: { action: "click->modal#open", remote: true } %>    <%= render 'modal' %>
+  </div>
+  <div id="contacts" class="flex flex-col items-baseline p-4 space-y-6 rounded shadow-lg">
+    <% @contacts.each do |contact| %>
+      <%= render "contact", contact: contact %>
+    <% end %>
+  </div>
+</div>
