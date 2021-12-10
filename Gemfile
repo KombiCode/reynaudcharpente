@@ -83,3 +83,5 @@ gem "cable_ready", github: "stimulusreflex/cable_ready"
 
 # Inline SVG
 gem 'inline_svg'
+
+gem "sendgrid-ruby", "~> 6.6"
