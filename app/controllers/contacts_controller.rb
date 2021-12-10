@@ -22,11 +22,12 @@ class ContactsController < ApplicationController
       render operations: cable_car
         .append('#contacts', html: html)
         .dispatch_event(name: 'submit:success')
+      ContactMailer.with(contact: @contact).contact_message_email.deliver_now
     else
       html = render_to_string(partial: 'form', locals: { contact: @contact })
       render operations: cable_car
         .inner_html('#contact_form', html: html), status: :unprocessable_entity
-      end
+    end
   end
 
   private

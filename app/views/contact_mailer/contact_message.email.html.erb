@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= @contact.name %> a rempli le formulaire de contact sur ReynaudCharpente et a rédigé le message suivante</h1>
+    <p>
+      <%= @contact.messages.first.body %>
+    </p>
+    <p>
+      Répondre à : <%= @contact.email %>
+    </p>
+  </body>
+</html>
