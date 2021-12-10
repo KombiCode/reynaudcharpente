@@ -80,3 +80,6 @@ gem 'friendly_id', '~> 5.4.0'
 gem 'strong_migrations', '~> 0.7.6'
 
 gem "cable_ready", github: "stimulusreflex/cable_ready" 
+
+# Inline SVG
+gem 'inline_svg'
