@@ -1,0 +1,41 @@
+fr:
+  welcome: "Bienvenue sur notre nouveau site!"
+  wood_passion: "Reynaud Charpente, la passion du bois depuis 3 générations."
+  timber_house: "Le spécialiste de la maison ossature bois en Isère et Savoie!"
+  contacts: "Contacts"
+  new_contact: "Nouveau Contact"
+  thanks_for_interest: "Merci pour votre intérêt !"
+  ask_for_info: "Indiquez vos coordonnées ainsi que votre message et nous vous recontacterons dès que possible."
+  send_message: "Envoyer le message"
+  cancel: "Annuler"
+
+  message_sent: "Votre message a été correctement envoyé."
+
+
+  error_not_found_title: "Page non trouvée"
+  error_not_found_content: "Il semble que vous ayez suivi un lien défectueux ou entré une URL qui n'existe pas."
+  error_internal_server_error_title: "Erreur du serveur"
+  error_internal_server_error_content: "Désolé, une erreur interne est survenue."
+  error_back_to_site: "Retour au site"
+
+  activerecord:
+    models:
+      contact: 'Contact'
+    attributes:
+      contact:
+        name: 'Nom'
+        email: 'Email'
+        phone: 'Numéro de téléphone'
+    errors:
+      models:
+        contact:
+          attributes:
+            name:
+              format: "Le nom %{message}"
+              blank: 'doit être renseigné'
+            email:
+              format: "L'email %{message}"
+              blank: 'doit être renseigné'
+            messages:
+              format: "Veuillez %{message}"
+              blank: 'indiquer votre message'

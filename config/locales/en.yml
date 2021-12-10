@@ -30,4 +30,42 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  welcome: "Welcome to our new website!"
+  wood_passion: "Reynaud Charpente : the wood passion since 3 generations."
+  timber_house: "Timber frame house specialist in Isere and Haute-Savoie!"
+  contacts: "Contacts"
+  new_contact: "New Contact"
+  thanks_for_interest: "Thank you for your interest !"
+  ask_for_info: "Fill up information and describe your need. We will come back to you as soon as posible."
+  send_message: "Send message"
+  cancel: "Cancel"
+
+  message_sent: "Your message was successfully sent."
+
+  error_not_found_title: "Page not found"
+  error_not_found_content: "Looks like you've followed a broken link or entered a URL that doesn't exist on this site."
+  error_internal_server_error_title: "Server error"
+  error_internal_server_error_content: "Sorry, but something went wrong."
+  error_back_to_site: "Back to the site"
+
+  activerecord:
+    models:
+      contact: 'Contact'
+    attributes:
+      contact:
+        name: 'Name'
+        email: 'Email'
+        phone: 'Phone Number'
+    errors:
+      models:
+        contact:
+          attributes:
+            name:
+              format: "Name %{message}"
+              blank: 'cannot be blank'
+            email:
+              format: "Email %{message}"
+              blank: 'cannot be blank'
+            messages:
+              format: "Message %{message}"
+              blank: 'cannot be blank'
