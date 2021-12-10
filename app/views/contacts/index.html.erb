@@ -1,8 +1,8 @@
 <div class="max-w-3xl mx-auto mt-8">
   <div data-controller="extended-modal" 
        class="flex items-baseline justify-between mb-6">
-    <h1 class="text-3xl text-gray-900">Contacts</h1>
-    <%= link_to 'Nouveau Contact', new_contact_path,
+    <h1 class="text-3xl text-gray-900"><%= t('contacts') %></h1>
+    <%= link_to t('new_contact'), new_contact_path,
         class: "text-blue-600", data: { action: "click->extended-modal#open", remote: true } %>
     <%= render 'modal' %>
   </div>
