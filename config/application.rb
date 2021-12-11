@@ -25,5 +25,7 @@ module Reynaudcharpente
 
     config.active_model.i18n_customize_full_message = true
 
+    config.action_mailer.asset_host = ENV['DOMAIN_FOR_CONTACTS_EMAIL']
+
   end
 end
