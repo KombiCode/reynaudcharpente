@@ -1,3 +1,3 @@
-<%= @contact.name tr('has_filled_form')%>
+<%= @contact.name %> a rempli le formulaire de contact et rédigé le message ci-dessous.
 <%= @contact.messages.first.body %>
-<%= tr('reply_to') @contact.email %>
+Répondre à:<%= @contact.email %>

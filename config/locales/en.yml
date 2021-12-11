@@ -42,10 +42,6 @@ en:
 
   message_sent: "Your message was successfully sent."
 
-  contact_mail_subject: "New contact message"
-  has_filled_form : "has filled the contact form and written below message."
-  reply_to : "Reply to:"
-
   error_not_found_title: "Page not found"
   error_not_found_content: "Looks like you've followed a broken link or entered a URL that doesn't exist on this site."
   error_internal_server_error_title: "Server error"
