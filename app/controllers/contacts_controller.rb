@@ -23,7 +23,6 @@ class ContactsController < ApplicationController
         .append('#contacts', html: html)
         .dispatch_event(name: 'submit:success')
       ContactMailer.with(contact: @contact).contact_message_email.deliver_now
-      # UserNotifierMailer.send_signup_email(@user).deliver
     else
       html = render_to_string(partial: 'form', locals: { contact: @contact })
       render operations: cable_car

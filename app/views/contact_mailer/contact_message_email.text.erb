@@ -1,3 +1,4 @@
-<%= @contact.name %> a rempli le formulaire de contact sur ReynaudCharpente et a rédigé le message suivant
+<%= @contact.name tr('has_filled_form')%>
 <%= @contact.messages.first.body %>
-Répondre à : <%= @contact.email %>
+<%= tr('reply_to') @contact.email %>
+<%= image_tag attachments['rc-banner01.png'].url %>

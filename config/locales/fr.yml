@@ -11,6 +11,9 @@ fr:
 
   message_sent: "Votre message a été correctement envoyé."
 
+  contact_mail_subject: "Nouveau message de contact"
+  has_filled_form : "a rempli le formulaire de contact et rédigé le message ci-dessous."
+  reply_to : "Répondre à:"
 
   error_not_found_title: "Page non trouvée"
   error_not_found_content: "Il semble que vous ayez suivi un lien défectueux ou entré une URL qui n'existe pas."
