@@ -6,9 +6,9 @@ export default class ExtendedModal extends Modal {
     document.addEventListener("modal:loaded", () => {
       this.containerTarget.classList.remove(this.toggleClass);
     }, { once: true });
-    document.addEventListener("submit:success", () => {
-      this.close()
-    }, { once: true });
+    // document.addEventListener("submit:success", () => {
+    //   this.close()
+    // }, { once: true });
 
     document.body.classList.add('fixed', 'inset-x-0', 'overflow-hidden');
     document.body.insertAdjacentHTML('beforeend', this.backgroundHtml);
@@ -24,6 +24,12 @@ export default class ExtendedModal extends Modal {
 
     // Lock the scroll and save current scroll position
     this.lockScroll();
+  }
+
+  handleSuccess({ detail: { success } }) {
+    if (success) {
+      this.close();
+    }
   }
 
   _backgroundHTML() {

@@ -1,0 +1,41 @@
+<div class="hidden w-full max-w-sm mt-4 bg-white rounded-lg shadow-lg pointer-events-auto" data-turbo-cache="false" data-notification-action-url="<%= @data.dig(:action, :url) %>" data-notification-action-method="<%= @data.dig(:action, :method) %>" data-notification-timeout="<%= @data[:timeout] %>" data-controller="notification">
+  <div class="overflow-hidden rounded-lg shadow-xs">
+    <div class="p-4">
+      <div class="flex items-start">
+        <div class="flex-shrink-0">
+          <div class="h-6 w-6 <%= @icon_color_class %>">
+            <i class="fas <%= @icon_class %>"></i>
+          </div>
+        </div>
+        <div class="ml-3 w-0 flex-1 pt-0.5">
+          <p class="text-sm font-medium leading-5 text-gray-900">
+            <%= @data[:title] %>
+          </p>
+          <% if @data[:body].present? %>
+            <p class="mt-1 text-sm leading-5 text-gray-500">
+              <%= @data[:body] %>
+            </p>
+          <% end %>
+          <% if @data[:action].present? %>
+            <div class="mt-2" data-notification-target="buttons">
+              <a data-turbo-frame="_top" <% if @data.dig(:action, :method) == 'get' %> href="<%= @data.dig(:action, :url) %>" <% else %> href="#" data-action="notification#run" <% end %> class="text-sm font-medium leading-5 text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-500 focus:outline-none focus:underline">
+                <%= @data.dig(:action, :name) %>
+              </a>
+              <button data-action="notification#close" class="ml-6 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out hover:text-gray-500 focus:outline-none focus:underline">
+                <%= t('.dismiss') %>
+              </button>
+            </div>
+          <% end %>
+        </div>
+        <div class="flex flex-shrink-0 ml-4">
+          <button class="inline-flex text-gray-400 transition duration-150 ease-in-out focus:outline-none focus:text-gray-500" data-action="notification#close">
+            <i class="w-5 h-5 far fa-times"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <% if @data[:countdown] %>
+      <div class="w-0 h-1 bg-indigo-600 rounded-lg" data-notification-target="countdown"></div>
+    <% end %>
+  </div>
+</div>
