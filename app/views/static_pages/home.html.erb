@@ -2,10 +2,15 @@
   <h1 class="mb-4 text-4xl font-akaya text-brandBrown"><%= t('welcome') %></h1>
   <p class="text-xl font-light leading-snug font-adventpro"><%= t('wood_passion') %></p>
   <p class="text-xl font-light leading-snug font-adventpro"><%= t('timber_house') %></p>
-  <div class="flex w-24 mt-4 ml-auto mr-auto">
-    <%= image_tag "rc-logo01.svg", alt: "Reynaud Charpente, spécialiste maison ossature bois", width: "180", height: "180", class: "content-center" %>
+  <div class="flex w-24 mt-4 ml-auto mr-auto" data-controller="extended-modal">
+    <%= link_to new_contact_path, data: { action: "click->extended-modal#open", remote: true } do %>
+      <%= image_tag "rc-logo01.svg", alt: "Reynaud Charpente, spécialiste maison ossature bois", width: "180", height: "180", class: "content-center" %>
+    <% end %>
+    <%= render 'contacts/modal' %>
   </div>
   <% if Rails.env == 'staging'%>
     <p class="mt-2 text-sm font-thin leading-snug">(<%= Rails.env %>)</p>
   <% end %>
 </div>
+
+
