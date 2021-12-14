@@ -18,11 +18,14 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     if @contact.save
-      html = render_to_string(partial: 'contact', locals: { contact: @contact })
-      render operations: cable_car
-        .append('#contacts', html: html)
-        .dispatch_event(name: 'submit:success')
       ContactMailer.with(contact: @contact).contact_message_email.deliver_now
+      respond_to do |format|
+        flash = {
+          title: t('message_sent'),
+          timeout: 4
+        }
+        format.html { redirect_to root_url, success: flash }
+      end
     else
       html = render_to_string(partial: 'form', locals: { contact: @contact })
       render operations: cable_car

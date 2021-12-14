@@ -8,3 +8,7 @@ application.register("hello", HelloController)
 
 import ExtendedModalController from "./extended_modal_controller.js"
 application.register("extended-modal", ExtendedModalController)  
+
+import NotificationController from "./notification_controller.js"
+application.register("notification", NotificationController)
+
