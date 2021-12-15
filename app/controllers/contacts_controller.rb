@@ -28,6 +28,8 @@ class ContactsController < ApplicationController
         format.html { redirect_to root_url, success: flash }
       end
     else
+      # need to 'rebuild' messages area
+      @contact.messages.build
       html = render_to_string(partial: 'form', locals: { contact: @contact })
       render operations: cable_car
         .inner_html('#contact_form', html: html), status: :unprocessable_entity
