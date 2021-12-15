@@ -1,6 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import './components/forms.css';
+@import './components/notifications.css';
 @import 'tailwindcss/utilities';
 
 @font-face {

@@ -22,7 +22,8 @@ class ContactsController < ApplicationController
       respond_to do |format|
         flash = {
           title: t('message_sent'),
-          timeout: 4
+          timeout: 4,
+          countdown: true
         }
         format.html { redirect_to root_url, success: flash }
       end

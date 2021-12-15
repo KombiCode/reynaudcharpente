@@ -33,7 +33,7 @@ class NotificationComponent < ViewComponent::Base
   def icon_color_class
     case @type
     when 'success'
-      'text-green-400'
+      'text-brandGreen'
     when 'error'
       'text-red-800'
     when 'alert'

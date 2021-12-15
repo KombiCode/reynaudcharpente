@@ -1,0 +1,45 @@
+@layer components {
+  /* Notifications Start */
+  @keyframes notification-countdown {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+  }
+
+  .notification-enter {
+    @apply transition duration-300 ease-out transform;
+  }
+
+  .notification-enter-from {
+    @apply translate-y-2 opacity-0;
+  }
+
+  .notification-enter-to {
+    @apply translate-y-0 opacity-100;
+  }
+
+  @screen sm {
+    .notification-enter-from {
+      @apply translate-x-2 translate-y-0;
+    }
+    .notification-enter-to {
+      @apply translate-x-0;
+    }
+  }
+
+  .notification-leave {
+    @apply transition duration-100 ease-in;
+  }
+
+  .notification-leave-from {
+    @apply opacity-100;
+  }
+
+  .notification-leave-to {
+    @apply opacity-0;
+  }
+  /* Notifications End */
+}

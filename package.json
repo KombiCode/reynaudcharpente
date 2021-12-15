@@ -2,9 +2,12 @@
   "name": "app",
   "private": "true",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo-rails": "^7.1.0",
     "@rails/actioncable": "^6.1.4-1",
+    "@tailwindcss/custom-forms": "^0.2.1",
     "autoprefixer": "^10.4.0",
     "cable_ready": "^5.0.0-pre8",
     "esbuild": "^0.14.1",

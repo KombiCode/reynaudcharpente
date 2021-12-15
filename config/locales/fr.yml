@@ -9,7 +9,7 @@ fr:
   send_message: "Envoyer le message"
   cancel: "Annuler"
 
-  message_sent: "Votre message a été correctement envoyé."
+  message_sent: "Votre message a bien été envoyé."
 
   error_not_found_title: "Page non trouvée"
   error_not_found_content: "Il semble que vous ayez suivi un lien défectueux ou entré une URL qui n'existe pas."
