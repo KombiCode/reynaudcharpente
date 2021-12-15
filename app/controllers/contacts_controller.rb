@@ -18,15 +18,16 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     if @contact.save
+      flash = {
+        title: t('message_sent'),
+        timeout: 4,
+        countdown: true
+      }
+      html = render_to_string(partial: 'shared/flash_notice', locals: {flash_info: {success: flash}})
       ContactMailer.with(contact: @contact).contact_message_email.deliver_now
-      respond_to do |format|
-        flash = {
-          title: t('message_sent'),
-          timeout: 4,
-          countdown: true
-        }
-        format.html { redirect_to root_url, success: flash }
-      end
+      render operations: cable_car
+        .inner_html('#bound-notifications', html: html)
+        .dispatch_event(name: 'submit:success')
     else
       # need to 'rebuild' messages area
       @contact.messages.build
