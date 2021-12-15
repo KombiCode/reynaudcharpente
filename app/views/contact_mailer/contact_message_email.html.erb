@@ -3,20 +3,17 @@
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
     <style>
-    h2 {
-      font-size: 2rem;
-    }
-    h3 {
+    h4 {
       color: #4c1212;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-family: "Trebuchet MS", Verdana, sans-serif;
     }
-    h4 {
+    h5 {
       color: #4c1212;
       font-size: 1.4rem;
       font-family: Helvetica, Arial, sans-serif;
     }
-    h5 {
+    h6 {
       color: #a1d02f;
       font-size: 1.2rem;
       font-family: Helvetica, Arial, sans-serif;
@@ -24,17 +21,17 @@
 </style>
   </head>
   <body>
-    <h2>Voici le nouveau message issu de '<%= ENV['DOMAIN_FOR_CONTACTS_EMAIL'] %>':</h2>
-      <p>
-        (message
-        <span>rédigé le <%= DateTime.parse(@contact.created_at.localtime.to_s).strftime("%d-%m-%Y, à %Hh%M") %></span>
-        )
-      </p>
-      <h3>
+    <div>
+      <h3>Voici le nouveau message issu de '<%= ENV['DOMAIN_FOR_CONTACTS_EMAIL'] %>':</h3>
+      <h4>
         <%= @contact.messages.first.body %>
-      </h3>
-      <h4><%= @contact.name %></h4>
-      <h5><%= @contact.phone %></h5>
+      </h4>
+    </div>
+    <div>
+      <h3>Coordonnées du contact:</h3>
+      <h5><%= @contact.name %></h5>
+      <h6><%= @contact.phone %></h6>
       <p><%= @contact.email %></p>
+    </div>
   </body>
 </html>
