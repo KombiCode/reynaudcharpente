@@ -7,6 +7,16 @@ import CableReady from "cable_ready"
 import { CableCar } from "mrujs/plugins"
 import * as Turbo from "@hotwired/turbo"
 
+// Fontawesome
+import { config, library, dom } from '@fortawesome/fontawesome-svg-core'
+// Change the config to fix the flicker
+config.mutateApproach = 'sync'
+// Import icons
+import { faInfoCircle, faCheckCircle, faExclamationCircle, faExclamationTriangle, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+library.add(faInfoCircle, faCheckCircle, faExclamationCircle, faExclamationTriangle, faExternalLinkAlt)
+// Load icons
+dom.watch()
+
 window.Turbo = Turbo;
 
 mrujs.start({
