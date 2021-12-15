@@ -8,7 +8,7 @@
           </div>
         </div>
         <div class="ml-3 w-0 flex-1 pt-0.5">
-          <p class="text-sm font-medium leading-5 text-gray-900">
+          <p class="text-sm font-bold leading-5 text-brandBrown font-adventpro">
             <%= @data[:title] %>
           </p>
           <% if @data[:body].present? %>
@@ -35,7 +35,7 @@
       </div>
     </div>
     <% if @data[:countdown] %>
-      <div class="w-0 h-1 bg-indigo-600 rounded-lg" data-notification-target="countdown"></div>
+      <div class="w-0 h-1 rounded-lg bg-brandYellow" data-notification-target="countdown"></div>
     <% end %>
   </div>
 </div>

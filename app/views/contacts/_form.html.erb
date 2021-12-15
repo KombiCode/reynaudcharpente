@@ -28,7 +28,7 @@
     <div class="form-group">
       <%= form.label "Message", class: "label" %>
       <%= form.fields_for :messages do |m| %>
-        <%= m.text_area :body, class: "input" %>
+        <%= m.text_area :body, class: "input", rows: 6 %>
       <% end %>
     </div>
 

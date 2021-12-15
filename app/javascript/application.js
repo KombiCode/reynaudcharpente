@@ -12,8 +12,12 @@ import { config, library, dom } from '@fortawesome/fontawesome-svg-core'
 // Change the config to fix the flicker
 config.mutateApproach = 'sync'
 // Import icons
-import { faInfoCircle, faCheckCircle, faExclamationCircle, faExclamationTriangle, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-library.add(faInfoCircle, faCheckCircle, faExclamationCircle, faExclamationTriangle, faExternalLinkAlt)
+import { faInfoCircle, faCheckCircle,
+         faExclamationCircle, faExclamationTriangle,
+         faExternalLinkAlt, faTimes } from '@fortawesome/free-solid-svg-icons'
+library.add(faInfoCircle, faCheckCircle,
+            faExclamationCircle, faExclamationTriangle,
+            faExternalLinkAlt, faTimes)
 // Load icons
 dom.watch()
 
