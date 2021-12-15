@@ -1,3 +1,6 @@
-<%= @contact.name %> a rempli le formulaire de contact et rédigé le message ci-dessous.
+Voici le nouveau message issu de '<%= ENV['DOMAIN_FOR_CONTACTS_EMAIL'] %>'
 <%= @contact.messages.first.body %>
-Répondre à:<%= @contact.email %>
+Coordonnées du contact:
+<%= @contact.name %>
+<%= @contact.phone %>
+<%= @contact.email %>
