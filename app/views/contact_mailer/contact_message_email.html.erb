@@ -2,28 +2,39 @@
 <html>
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <style>
+    h2 {
+      font-size: 2rem;
+    }
+    h3 {
+      color: #4c1212;
+      font-size: 1.8rem;
+      font-family: "Trebuchet MS", Verdana, sans-serif;
+    }
+    h4 {
+      color: #4c1212;
+      font-size: 1.4rem;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    h5 {
+      color: #a1d02f;
+      font-size: 1.2rem;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+</style>
   </head>
   <body>
-    <h3>Un nouveau contact a rempli le formulaire sur '<%= ENV['DOMAIN_FOR_CONTACTS_EMAIL'] %>', voici les informations :</h3>
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-      <div class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
-        <div class="p-8 bg-white border rounded shadow-sm">
-          <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
-            message
-            <span class="text-gray-600">rédigé le <%= DateTime.parse(@contact.created_at.to_s).strftime("%d-%m-%Y, à %Hh%M") %></span>
-          </p>
-          <p class="mb-5 text-gray-700">
-            <%= @contact.messages.first.body %>
-          </p>
-          <div class="flex items-center">
-            <div>
-              <p class="font-semibold text-gray-800"><%= @contact.name %></p>
-              <p class="text-sm font-medium leading-4 text-gray-600"><%= @contact.phone %></p>
-              <p class="mt-2 text-sm font-medium leading-4 text-brandBrown "><%= @contact.email %></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h2>Voici le nouveau message issu de '<%= ENV['DOMAIN_FOR_CONTACTS_EMAIL'] %>':</h2>
+      <p>
+        (message
+        <span>rédigé le <%= DateTime.parse(@contact.created_at.localtime.to_s).strftime("%d-%m-%Y, à %Hh%M") %></span>
+        )
+      </p>
+      <h3>
+        <%= @contact.messages.first.body %>
+      </h3>
+      <h4><%= @contact.name %></h4>
+      <h5><%= @contact.phone %></h5>
+      <p><%= @contact.email %></p>
   </body>
 </html>
