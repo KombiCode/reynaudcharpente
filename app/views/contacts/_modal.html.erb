@@ -3,11 +3,9 @@
      style="z-index: 9999;">
   <div class="relative w-full max-w-lg max-h-screen">
     <div class="m-1 bg-white rounded shadow">
-      <div class="px-4 py-5 border-b border-gray-200 sm:px-6">
-        <div data-action="click->extended-modal#close" class="float-right w-4 h-4">
-          <%= inline_svg_tag "crossmark.svg", class: 'z-50 cursor-pointer w-4 h-4' %>
-        </div>
-        <h3 class="pt-1 mt-4 mb-2 text-xl font-bold text-center sm:pt-4 sm:mb-8 sm:text-4xl heading">
+      <div class="px-4 py-2 border-b border-gray-200 sm:px-6">
+        <i data-action="click->extended-modal#close" class="z-50 float-right w-4 h-4 cursor-pointer modal-close fas fa-times"></i>
+        <h3 class="pt-1 mb-2 text-xl font-bold text-center sm:pt-4 sm:mb-4 sm:text-2xl heading">
           <%= t('thanks_for_interest') %>
         </h3>
         <p class="text-center"> <%= t('ask_for_info') %> </p>
