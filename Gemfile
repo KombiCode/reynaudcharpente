@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.0.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.0.alpha2"
+gem "rails", "~> 7.0.0"
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
@@ -87,3 +87,7 @@ gem 'inline_svg'
 gem "sendgrid-ruby", "~> 6.6"
 
 gem "view_component"
+
+# Required after upgrading from rails 7.0.0.alpha2 to rails 7.0.0
+# This fixed the isuue "Don't know how to build task 'assets:precompile'"
+gem 'sprockets-rails'
