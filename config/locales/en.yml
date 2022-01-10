@@ -39,6 +39,7 @@ en:
   ask_for_info: "Fill up information and describe your need. We will come back to you as soon as posible."
   send_message: "Send message"
   cancel: "Cancel"
+  project_start: "You'd like to start your project"
 
   message_sent: "Your message was successfully sent."
 
@@ -51,11 +52,16 @@ en:
   activerecord:
     models:
       contact: 'Contact'
+      message: 'Message'
     attributes:
       contact:
         name: 'Name'
         email: 'Email'
         phone: 'Phone Number'
+      message/project_schedule:
+        asap: 'As soon as possible'
+        begin: "I'm at the beginning of my project"
+        midterm: "It's a mid/long term project"
     errors:
       models:
         contact:
