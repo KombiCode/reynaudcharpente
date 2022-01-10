@@ -25,16 +25,14 @@
       <%= form.text_field :phone, class: "input" %>
     </div>
 
+   <%= form.fields_for :messages do |m| %>
     <div class="form-group">
       <%= form.label :message, class: "label" %>
-      <%= form.fields_for :messages do |m| %>
-        <%= m.text_area :body, class: "input", rows: 6 %>
-      <% end %>
+      <%= m.text_area :body, class: "input", rows: 6 %>
     </div>
 
     <div class="form-group">
       <%= form.label t('project_start'), class: "label" %>
-      <%= form.fields_for :messages do |m| %>
         <ul class="flex items-start justify-between max-w-3xl mt-3">
           <% human_attribute_project_schedules.each do |k, v| %>
             <li class="relative">
@@ -43,8 +41,8 @@
             </li>
           <% end %>
         </ul>
-      <% end %>
     </div>
+    <% end %>
 
   </div>
 
