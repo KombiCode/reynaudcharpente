@@ -8,6 +8,7 @@ fr:
   ask_for_info: "Indiquez vos coordonnées et votre message. Nous vous recontacterons dès que possible."
   send_message: "Envoyer le message"
   cancel: "Annuler"
+  project_start: "Vous souhaitez débuter votre projet"
 
   message_sent: "Votre message a bien été envoyé."
 
@@ -20,11 +21,16 @@ fr:
   activerecord:
     models:
       contact: 'Contact'
+      message: 'Message'
     attributes:
       contact:
         name: 'Nom'
         email: 'Email'
         phone: 'Numéro de téléphone'
+      message/project_schedule:
+        asap: 'Dès que possible'
+        begin: 'Je suis au début de mon projet'
+        midterm: "C'est un projet à moyen ou long terme"
     errors:
       models:
         contact:

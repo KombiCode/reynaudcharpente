@@ -10,10 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_09_131043) do
+ActiveRecord::Schema.define(version: 2022_01_10_104506) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  # Custom types defined in this database.
+  # Note that some types may not work with other database engines. Be careful if changing database.
+  create_enum "project_schedule", ["asap", "begin", "midterm"]
 
   create_table "contacts", force: :cascade do |t|
     t.string "name"
@@ -28,6 +32,7 @@ ActiveRecord::Schema.define(version: 2021_12_09_131043) do
     t.bigint "contact_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.enum "project_schedule", default: "midterm", enum_type: "project_schedule"
     t.index ["contact_id"], name: "index_messages_on_contact_id"
   end
 
