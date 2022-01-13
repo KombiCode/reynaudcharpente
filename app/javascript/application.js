@@ -14,11 +14,11 @@ config.mutateApproach = 'sync'
 // Import icons
 import { faInfoCircle, faCheckCircle,
          faExclamationCircle, faExclamationTriangle,
-         faExternalLinkAlt, faTimes } from '@fortawesome/free-solid-svg-icons'
+         faExternalLinkAlt, faTimes, faBars } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
- library.add(faInfoCircle, faCheckCircle,
+library.add(faInfoCircle, faCheckCircle,
             faExclamationCircle, faExclamationTriangle,
-            faExternalLinkAlt, faTimes,
+            faExternalLinkAlt, faTimes, faBars,
             faFacebook)
 // Load icons
 dom.watch()
@@ -30,3 +30,10 @@ mrujs.start({
     new CableCar(CableReady)
   ]
 })
+
+const btn = document.querySelector('button.mobile-menu-button');
+const menu = document.querySelector('.mobile-menu');
+
+btn.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+});
