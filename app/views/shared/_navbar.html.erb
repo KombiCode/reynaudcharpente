@@ -1,52 +1,44 @@
-<!-- navbar goes here -->
-<nav aria-label="site" class="bg-gray-50">
-  <div class="px-4 mx-auto">
-    <div class="flex justify-between">
-      <div class="flex items-center">
-        <!-- logo -->
-        <a href="/" class="flex items-center my-2 mr-8">
-          <%= image_tag "rc-logo01.svg", alt: "Reynaud Charpente, spécialiste maison ossature bois", width: "80", height: "80", class: "content-center" %>
-          <span class="text-xl font-akaya text-brandBrown">Reynaud Charpente</span>
-        </a>
-        <% if Rails.env == 'staging'%>
-          <p class="mt-2 text-sm font-thin leading-snug">(<%= Rails.env %>)</p>
-        <% end %>
-        <!-- primary nav -->
-        <div class="hidden md:inline-block">
-          <a class="mr-8 text-xl font-medium text-gray-500 transition ease-in-out duration-250 font-adventpro hover:text-brandBrown hover:underline" href="#">Ossature Bois</a>
-          <a class="mr-8 text-xl text-gray-500 transition ease-in-out duration-250 fonnt-medium font-adventpro hover:text-brandBrown hover:underline" href="#">Charpente</a>
-          <a class="mr-8 text-xl font-medium text-gray-500 transition ease-in-out duration-250 font-adventpro hover:text-brandBrown hover:underline" href="#">Blog</a>
-          <a class="mr-8 text-xl font-medium text-gray-500 transition ease-in-out duration-250 font-adventpro hover:text-brandBrown hover:underline" href="employees#index">L'Entreprise</a>
-        </div>
-      </div>
-      <!-- secondary nav -->
-      <div class="flex items-center">
-        <div data-controller="extended-modal" class="px-4">
-          <span class="inline-flex rounded-md shadow-md">
-            <span class="inline-flex rounded-md shadow-xs">    
-              <%= link_to "Contact", new_contact_path,
-                  data: { action: "click->extended-modal#open", remote: true },
-                  class: "font-adventpro text-xl text-brandBrown inline-flex items-center px-4 py-2 font-medium leading-6 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:bg-brandGreen focus:outline-none focus:shadow-outline-brandYellow" %>
-              <%= render 'contacts/modal' %>
-            </span>
-          </span>
-        </div>
-        <a href="https://www.facebook.com/JFReynaudCharpente/?ref=aymt_homepage_panel" class="mr-2 md:mr-0">
-          <i class="text-gray-400 cursor-pointer hover:text-socialFacebook fab fa-facebook fa-lg"></i>
-        </a>
-      </div>
-      <!-- mobile button goes here -->
-      <div class="flex items-center md:hidden">
-        <button class="mobile-menu-button">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
+<header class="flex flex-wrap items-center px-6 py-2 bg-gray-50 lg:px-8 lg:py-0">
+  <div class="flex items-center justify-between flex-1">
+    <!-- logo -->
+    <a href="/" class="flex items-center my-2 mr-8">
+      <%= image_tag "rc-logo01.svg", alt: "Reynaud Charpente, spécialiste maison ossature bois", width: "80", height: "80", class: "content-center" %>
+      <span class="text-xl font-akaya text-brandBrown">Reynaud Charpente</span>
+    </a>
+    <% if Rails.env == 'staging'%>
+      <p class="mt-2 text-sm font-thin leading-snug">(<%= Rails.env %>)</p>
+    <% end %>
+  </div>
+
+  <label for="menu-toggle" class="block pointer-cursor lg:hidden">
+    <svg class="text-gray-900 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+      <title>menu</title>
+      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+    </svg>
+  </label>
+  <input class="hidden" type="checkbox" id="menu-toggle" />
+
+  <div class="hidden w-full lg:flex lg:items-center lg:w-auto" id="menu">
+    <nav>
+      <ul class="items-center justify-between pt-4 text-base text-gray-700 lg:flex lg:pt-0">
+        <li><a class="block px-0 py-3 mr-8 text-xl font-medium text-gray-500 transition ease-in-out border-b-2 border-transparent lg:p-4 duration-250 font-adventpro hover:border-brandBrown" href="#">Ossature Bois</a></li>
+        <li><a class="block px-0 py-3 mr-8 text-xl text-gray-500 transition ease-in-out border-b-2 border-transparent lg:p-4 duration-250 fonnt-medium font-adventpro hover:border-brandBrown" href="#">Charpente</a></li>
+        <li><a class="block px-0 py-3 mr-8 text-xl font-medium text-gray-500 transition ease-in-out border-b-2 border-transparent lg:p-4 duration-250 font-adventpro hover:border-brandBrown" href="#">Blog</a></li>
+        <li><a class="block px-0 py-3 mr-8 text-xl font-medium text-gray-500 transition ease-in-out border-b-2 border-transparent lg:p-4 duration-250 font-adventpro hover:border-brandBrown" href="employees#index">L'Entreprise</a></li>
+      </ul>
+    </nav>
+    <div data-controller="extended-modal" class="pr-4">
+      <span class="inline-flex rounded-md shadow-md">
+        <span class="inline-flex rounded-md shadow-xs">    
+          <%= link_to "Contact", new_contact_path,
+              data: { action: "click->extended-modal#open", remote: true },
+              class: "font-adventpro text-xl text-brandBrown inline-flex items-center px-4 py-2 font-medium leading-6 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:bg-brandGreen focus:outline-none focus:shadow-outline-brandYellow" %>
+          <%= render 'contacts/modal' %>
+        </span>
+      </span>
     </div>
+    <a href="https://www.facebook.com/JFReynaudCharpente/?ref=aymt_homepage_panel" class="flex items-center justify-start py-3 mb-4 lg:py-0 lg:ml-4 lg:mb-0 pointer-cursor">
+      <i class="text-gray-400 cursor-pointer hover:text-socialFacebook fab fa-facebook fa-lg"></i>
+    </a>
   </div>
-  <!-- mobile menu goes here -->
-  <div class="hidden mobile-menu md:hidden">
-    <a class="block px-4 py-2 text-sm font-medium text-gray-500 transition ease-in-out duration-250 font-adventpro hover:text-brandBrown hover:underline" href="#">Ossature Bois</a>
-    <a class="block px-4 py-2 text-sm text-gray-500 transition ease-in-out duration-250 fonnt-medium font-adventpro hover:text-brandBrown hover:underline" href="#">Charpente</a>
-    <a class="block px-4 py-2 text-sm font-medium text-gray-500 transition ease-in-out duration-250 font-adventpro hover:text-brandBrown hover:underline" href="#">Blog</a>
-  </div>
-</nav>
+</header>
