@@ -12,6 +12,9 @@ fr:
 
   message_sent: "Votre message a bien été envoyé."
 
+  breadcrumb_employees: "L'équipe"
+  breadcrumb_skills: "Compétences"
+
   error_not_found_title: "Page non trouvée"
   error_not_found_content: "Il semble que vous ayez suivi un lien défectueux ou entré une URL qui n'existe pas."
   error_internal_server_error_title: "Erreur du serveur"
@@ -22,6 +25,8 @@ fr:
     models:
       contact: 'Contact'
       message: 'Message'
+      employee: 'Employé'
+      skill: 'Compétence'
     attributes:
       contact:
         name: 'Nom'

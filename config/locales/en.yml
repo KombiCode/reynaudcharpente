@@ -43,6 +43,9 @@ en:
 
   message_sent: "Your message was successfully sent."
 
+  breadcrumb_employees: "Team"
+  breadcrumb_skills: "Skills"
+
   error_not_found_title: "Page not found"
   error_not_found_content: "Looks like you've followed a broken link or entered a URL that doesn't exist on this site."
   error_internal_server_error_title: "Server error"
@@ -53,6 +56,8 @@ en:
     models:
       contact: 'Contact'
       message: 'Message'
+      employee: 'Employee'
+      skill: 'Skill'
     attributes:
       contact:
         name: 'Name'
