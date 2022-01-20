@@ -12,8 +12,14 @@ fr:
 
   message_sent: "Votre message a bien été envoyé."
 
+  wood_frame: "Ossature Bois"
+  carpentry: "Charpente"
+  blog: "Blog"
+  company: "L'Entreprise"
+  team: "Equipe"
+  skills: "Compétences"
   breadcrumb_company: "L'Entreprise"
-  breadcrumb_employees: "L'équipe"
+  breadcrumb_employees: "Equipe"
   breadcrumb_skills: "Compétences"
 
   error_not_found_title: "Page non trouvée"

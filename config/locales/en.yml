@@ -43,6 +43,12 @@ en:
 
   message_sent: "Your message was successfully sent."
 
+  wood_frame: "Wood Frame"
+  carpentry: "Carpentry"
+  blog: "Blog"
+  company: "Company"
+  team: "Team"
+  skills: "Skills"
   breadcrumb_company: "Company"
   breadcrumb_employees: "Team"
   breadcrumb_skills: "Skills"

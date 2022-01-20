@@ -12,3 +12,6 @@ application.register("hello", HelloController)
 
 import NotificationController from "./notification_controller.js"
 application.register("notification", NotificationController)
+
+import { Dropdown } from "tailwindcss-stimulus-components"
+application.register('dropdown', Dropdown)
