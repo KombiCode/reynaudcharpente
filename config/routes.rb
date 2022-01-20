@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :employees, only: [ :index ]
+  resources :skills, only: [ :index ]
 
 end

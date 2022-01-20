@@ -43,6 +43,7 @@ en:
 
   message_sent: "Your message was successfully sent."
 
+  breadcrumb_company: "Company"
   breadcrumb_employees: "Team"
   breadcrumb_skills: "Skills"
 

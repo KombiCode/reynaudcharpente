@@ -12,6 +12,7 @@ fr:
 
   message_sent: "Votre message a bien été envoyé."
 
+  breadcrumb_company: "L'Entreprise"
   breadcrumb_employees: "L'équipe"
   breadcrumb_skills: "Compétences"
 
