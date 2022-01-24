@@ -1,7 +1,5 @@
-<div class="max-w-3xl mx-auto mt-8">
-  <div id="employees" class="flex flex-col items-baseline p-4 space-y-6 rounded shadow-lg">
-    <% @employees.each do |employee| %>
-      <%= render "employee", employee: employee %>
-    <% end %>
-  </div>
+<div id="employees" class="grid grid-cols-3 gap-8 p-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+  <% @employees.each do |employee| %>
+    <%= render "employee", employee: employee %>
+  <% end %>
 </div>
