@@ -21,6 +21,8 @@ module.exports = {
       fontFamily: {
         akaya: "Akaya Telivigala",
         adventpro: ["AdventPro", "sans-serif"],
+        dosis: ["Dosis", "sans-serif"],
+        signika: ["Signika", "sans-serif"]
       }
     },
   }

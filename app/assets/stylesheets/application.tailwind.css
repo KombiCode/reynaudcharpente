@@ -4,11 +4,13 @@
 @import './components/notifications.css';
 @import 'tailwindcss/utilities';
 
+/* Akaya font */
 @font-face {
   font-family: 'Akaya Telivigala';
   src: url('akaya-telivigala-all-400-normal.woff');
 }
 
+/* AdventPro font */
 @font-face {
   font-family: 'AdventPro';
   font-weight: 100;
@@ -43,4 +45,68 @@
   font-family: 'AdventPro';
   font-weight: 700;
   src: url('AdventPro-Bold.ttf');
+}
+
+/* Dosis font */
+@font-face {
+  font-family: 'Dosis';
+  font-weight: 200;
+  src: url('Dosis-ExtraLight.ttf');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-weight: 300;
+  src: url('Dosis-Light.ttf');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-weight: 400;
+  src: url('Dosis-Regular.ttf');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-weight: 500;
+  src: url('Dosis-Medium.ttf');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-weight: 600;
+  src: url('Dosis-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-weight: 700;
+  src: url('Dosis-Bold.ttf');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-weight: 800;
+  src: url('Dosis-ExtraBold.ttf');
+}
+
+/* Signika font */
+@font-face {
+  font-family: 'Signika';
+  font-weight: 300;
+  src: url('Signika-Light.ttf');
+}
+@font-face {
+  font-family: 'Signika';
+  font-weight: 400;
+  src: url('Signika-Regular.ttf');
+}
+@font-face {
+  font-family: 'Signika';
+  font-weight: 500;
+  src: url('Signika-Medium.ttf');
+}
+@font-face {
+  font-family: 'Signika';
+  font-weight: 600;
+  src: url('Signika-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'Signika';
+  font-weight: 700;
+  src: url('Signika-Bold.ttf');
 }
