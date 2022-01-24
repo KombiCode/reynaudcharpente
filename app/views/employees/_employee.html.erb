@@ -1,5 +1,10 @@
-<div class="w-full pb-2 text-gray-700 border-b border-gray-200">
-  <h1 class="mb-2 text-4xl font-akaya text-brandBrown"><%= employee.name %></h1>
-  <h2 class="mb-4 text-xl font-akaya text-brandGreen"><%= employee.job_title %></h2>
-  <p class="text-lg font-dosis"><%= employee.about %></p>
+<div class="shadow-xl rounded-xl">
+    <img class="object-cover w-full rounded-t-xl" width=500 height=500 src=<%= asset_path("picture-employee-card.jpg")%> alt="">
+    <div class="flex flex-col p-7">
+        <h2 class="mt-1 text-2xl font-bold truncate font-akaya text-brandBrown"><%= employee.name %></h2>
+        <div class="flex flex-row">
+            <div class="p-1 px-2 text-xs text-yellow-700 uppercase bg-yellow-100 rounded-2xl"><%= employee.job_title %></div>
+        </div>
+        <p class="mt-1 text-base text-gray-600"><%= employee.about %></p>
+    </div>
 </div>
