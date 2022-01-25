@@ -15,3 +15,6 @@ application.register("notification", NotificationController)
 
 import { Dropdown } from "tailwindcss-stimulus-components"
 application.register('dropdown', Dropdown)
+
+import AccordionController from "./accordion_controller.js"
+application.register("accordion", AccordionController)
