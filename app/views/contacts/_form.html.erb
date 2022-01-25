@@ -33,9 +33,9 @@
 
     <div class="form-group">
       <%= form.label t('project_start'), class: "label" %>
-        <ul class="flex items-start justify-between max-w-3xl mt-3">
+        <ul class="grid justify-between max-w-3xl grid-cols-1 mt-3 md:flex md:items-start">
           <% human_attribute_project_schedules.each do |k, v| %>
-            <li class="relative">
+            <li class="relative py-4">
               <%= m.radio_button :project_schedule, k,  class: "sr-only peer" %>
               <%= m.label "project_schedule_#{k}", v, class: "p-2 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-yellow-500 peer-checked:ring-2 peer-checked:border-transparent"%>
             </li>
