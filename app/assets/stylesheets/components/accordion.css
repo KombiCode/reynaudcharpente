@@ -1,0 +1,5 @@
+@layer components {
+  .accordion-arrow.active {
+    @apply rotate-180;
+  }
+}
