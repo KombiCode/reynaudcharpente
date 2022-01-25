@@ -46,12 +46,9 @@
 
   </div>
 
-  <div class="px-4 mt-6 rounded-b sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense font-signika">
-    <button type="submit" class="w-full px-4 py-2 mb-4 text-white rounded-sm bg-brandGreen sm:col-start-1">
+  <div class="flex items-center px-4 mt-6 rounded-b font-signika">
+    <button type="submit" class="w-full px-4 py-2 mb-4 text-white rounded-sm bg-brandGreen">
       <%= t('send_message') %>
-    </button>
-    <button data-action="click->extended-modal#close" class="w-full px-4 py-2 mt-3 mb-4 bg-gray-100 rounded-sm sm:mt-0 sm:col-start-2">
-      <%= t('cancel') %>
     </button>
   </div>
 <% end %>

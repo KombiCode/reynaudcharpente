@@ -8,8 +8,8 @@ class EmployeesController < ApplicationController
   private
 
   def set_breadcrumbs
-    add_breadcrumb(t('breadcrumb_company'))
-    add_breadcrumb(t('breadcrumb_employees'), employees_path)
+    add_breadcrumb(t('breadcrumb_company'), history_path)
+    add_breadcrumb(t('breadcrumb_employees'))
   end
 
 end

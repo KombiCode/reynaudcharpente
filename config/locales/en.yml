@@ -30,7 +30,9 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  company_name: "REYNAUD CHARPENTE"
   welcome: "Welcome to our new website!"
+  slogan: '"The wood passion since 3 generations"'
   wood_passion: "Reynaud Charpente : the wood passion since 3 generations."
   timber_house: "Timber frame house specialist in Isere and Haute-Savoie!"
   contacts: "Contacts"
@@ -43,10 +45,12 @@ en:
 
   message_sent: "Your message was successfully sent."
 
+  home_page: "Home"
   wood_frame: "Wood Frame"
   carpentry: "Carpentry"
   blog: "Blog"
   company: "Company"
+  history: "Histoire"
   team: "Team"
   skills: "Skills"
   breadcrumb_company: "Company"
