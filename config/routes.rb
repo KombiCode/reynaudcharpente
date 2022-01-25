@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root "static_pages#home"
+  get 'history', to: 'static_pages#company_history', as: 'history'
 
   resources :contacts, only: [ :new, :create, :index ]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

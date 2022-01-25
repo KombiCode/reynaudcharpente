@@ -1,5 +1,7 @@
 fr:
+  company_name: "REYNAUD CHARPENTE"
   welcome: "Bienvenue sur notre nouveau site!"
+  slogan: '"La passion du bois depuis 3 générations"'
   wood_passion: "Reynaud Charpente, la passion du bois depuis 3 générations."
   timber_house: "Le spécialiste de la maison ossature bois en Isère et Savoie!"
   contacts: "Contacts"
@@ -12,10 +14,12 @@ fr:
 
   message_sent: "Votre message a bien été envoyé."
 
+  home_page: "Accueil"
   wood_frame: "Ossature Bois"
   carpentry: "Charpente"
   blog: "Blog"
   company: "L'Entreprise"
+  history: "Histoire"
   team: "Equipe"
   skills: "Compétences"
   breadcrumb_company: "L'Entreprise"
