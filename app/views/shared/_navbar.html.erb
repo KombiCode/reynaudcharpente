@@ -1,11 +1,11 @@
-<header class="flex flex-wrap items-center px-6 py-2 bg-gray-50 lg:px-8 lg:py-0">
+<header class="flex flex-wrap items-center px-6 py-2 bg-white lg:px-8 lg:py-0">
   <div class="flex items-center justify-between flex-1">
     <!-- logo -->
     <a href="/" class="flex items-center my-2 mr-8">
-      <%= image_tag "rc-logo01.svg", alt: "Reynaud Charpente, spécialiste maison ossature bois", width: "80", height: "80", class: "content-center" %>
-      <div class="grid grid-cols-1 grid-rows-2">
-        <span class="text-lg md:text-xl font-dosis text-brandBrown"><%=t('company_name') %></span>
-        <span class="text-sm md:text-base font-akaya text-brandBrown"><%=t('slogan') %></span>
+      <%= image_tag "rc-logo03.svg", alt: "Reynaud Charpente, spécialiste maison ossature bois", width: "80", height: "80", class: "content-center" %>
+      <div class="grid grid-cols-1 grid-rows-2 px-2">
+        <span class="text-lg md:text-xl font-dosis"><%=t('company_name') %></span>
+        <span class="text-sm md:text-base font-dosis"><%=t('slogan') %></span>
       </div>
     </a>
     <% if Rails.env == 'staging'%>
@@ -21,30 +21,32 @@
   <input class="hidden" type="checkbox" id="menu-toggle" />
   <div class="hidden w-full lg:flex lg:items-center lg:w-auto" id="menu">
     <nav>
-      <ul class="items-center justify-between pt-4 text-base text-gray-700 lg:flex lg:pt-0">
+      <ul class="items-center justify-between pt-4 text-base text-gray-500 lg:flex lg:pt-0">
         <li>
-          <a class="block px-0 py-3 mr-8 text-xl font-medium text-gray-500 transition ease-in-out border-b-2 border-transparent lg:p-4 duration-250 font-dosis hover:border-brandBrown" href="#">
+          <a class="block px-0 py-3 mr-8 text-xl font-medium transition ease-in-out border-b-2 border-transparent lg:p-4 duration-250 font-dosis hover:text-brandBrown" href="#">
             <%= t('wood_frame') %>
           </a>
         </li>
         <li>
-          <a class="block px-0 py-3 mr-8 text-xl font-medium text-gray-500 transition ease-in-out border-b-2 border-transparent lg:p-4 duration-250 font-dosis hover:border-brandBrown" href="#">
+          <a class="block px-0 py-3 mr-8 text-xl font-medium transition ease-in-out border-b-2 border-transparent lg:p-4 duration-250 font-dosis hover:text-brandBrown" href="#">
             <%= t('carpentry') %>
           </a>
         </li>
         <li>
-          <a class="block px-0 py-3 mr-8 text-xl font-medium text-gray-500 transition ease-in-out border-b-2 border-transparent lg:p-4 duration-250 font-dosis hover:border-brandBrown" href="#">
+          <a class="block px-0 py-3 mr-8 text-xl font-medium transition ease-in-out border-b-2 border-transparent lg:p-4 duration-250 font-dosis hover:text-brandBrown" href="#">
             <%= t('blog') %>
           </a>
         </li>
         <li>
-          <div class="inline-block px-0 py-2 mt-4 mb-4 text-sm leading-none no-underline rounded md:px-4 text-gray hover:bg-brandGreen lg:mt-0 lg:mb-0">
+          <!-- <div class="inline-block px-0 py-2 mt-4 mb-4 text-sm leading-none no-underline rounded md:px-4 text-gray hover:bg-brandGreen lg:mt-0 lg:mb-0"> -->
             <div class="relative" data-controller="dropdown">
-              <div data-action="click->dropdown#toggle click@window->dropdown#hide" role="button" data-dropdown-target="button" tabindex="0" class="inline-block select-none">
-                <span class="flex items-center inline-block text-xl font-medium text-gray-500 appearance-none hover:text-brandBrown font-dosis">
+              <div data-action="click->dropdown#toggle click@window->dropdown#hide"
+                   data-dropdown-target="button" tabindex="0"
+                   class="flex items-center text-xl font-medium appearance-none select-none hover:text-brandBrown font-dosis">
+<!--                <span class="flex items-center inline-block text-xl font-medium appearance-none hover:text-brandGreen hover:bg-gray-100 font-dosis"> -->
                   <%= t('company') %>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-4 h-4"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>
-                </span>
+<!--                </span> -->
               </div>
               <div data-dropdown-target="menu" class="absolute hidden mt-2 md:right-0">
                 <div class="overflow-hidden bg-white border rounded shadow">
@@ -52,21 +54,21 @@
                         data: {action: "click->dropdown#toggle"},
                         class: 'block px-8 py-2 mb-1 text-xl font-medium text-gray-500
                                 transition ease-in-out border-b-2 
-                                lg:p-4 duration-250 font-dosis hover:border-brandBrown' %>
+                                lg:p-4 duration-250 font-dosis hover:text-brandBrown' %>
                   <%= link_to t('team'),  employees_path,
                         data: {action: "click->dropdown#toggle"},
                         class: 'block px-8 py-2 mb-1 text-xl font-medium text-gray-500
-                                transition ease-in-out border-b-2 border-transparent 
-                                lg:p-4 duration-250 font-dosis hover:border-brandBrown' %>
+                                transition ease-in-out  
+                                lg:p-4 duration-250 font-dosis hover:text-brandBrown' %>
                   <%= link_to t('skills'), skills_path,
                         data: {action: "click->dropdown#toggle"},
                         class: 'block px-8 py-2 mb-1 text-xl font-medium text-gray-500
-                                transition ease-in-out border-b-2 border-transparent 
-                                lg:p-4 duration-250 font-dosis hover:border-brandBrown' %>
+                                transition ease-in-out  
+                                lg:p-4 duration-250 font-dosis hover:text-brandBrown' %>
                 </div>
               </div>
             </div>
-          </div>
+          <!-- </div> -->
         </li>
       </ul>
     </nav>
@@ -75,7 +77,7 @@
         <span class="inline-flex rounded-md shadow-xs">
           <%= link_to "Contact", new_contact_path,
               data: { action: "click->extended-modal#open", remote: true },
-              class: "font-dosis text-xl text-white inline-flex items-center px-0 md:px-4 py-2 font-medium leading-6 transition duration-150 ease-in-out bg-brandGreen border border-transparent rounded-md hover:text-brandBrown focus:outline-none focus:shadow-outline-brandYellow" %>
+              class: "font-dosis text-xl text-white inline-flex items-center px-0 md:px-4 py-2 font-medium leading-6 transition duration-150 ease-in-out bg-brandBrown border border-transparent rounded-md hover:text-brandBrown hover:bg-white focus:outline-none focus:shadow-outline-brandYellow" %>
           <%= render 'contacts/modal' %>
         </span>
       </span>
