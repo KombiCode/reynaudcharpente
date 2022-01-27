@@ -12,7 +12,6 @@
       <p class="mt-2 text-sm font-thin leading-snug">(<%= Rails.env %>)</p>
     <% end %>
   </div>
-
   <label for="menu-toggle" class="block pointer-cursor lg:hidden">
     <svg class="text-gray-900 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
       <title>menu</title>
@@ -20,7 +19,6 @@
     </svg>
   </label>
   <input class="hidden" type="checkbox" id="menu-toggle" />
-
   <div class="hidden w-full lg:flex lg:items-center lg:w-auto" id="menu">
     <nav>
       <ul class="items-center justify-between pt-4 text-base text-gray-700 lg:flex lg:pt-0">
@@ -50,17 +48,17 @@
               </div>
               <div data-dropdown-target="menu" class="absolute hidden mt-2 md:right-0">
                 <div class="overflow-hidden bg-white border rounded shadow">
-                    <%= link_to t('history'),  "/history",
+                  <%= link_to t('history'),  "/history",
                         data: {action: "click->dropdown#toggle"},
                         class: 'block px-8 py-2 mb-1 text-xl font-medium text-gray-500
                                 transition ease-in-out border-b-2 
                                 lg:p-4 duration-250 font-dosis hover:border-brandBrown' %>
-                    <%= link_to t('team'),  employees_path,
+                  <%= link_to t('team'),  employees_path,
                         data: {action: "click->dropdown#toggle"},
                         class: 'block px-8 py-2 mb-1 text-xl font-medium text-gray-500
                                 transition ease-in-out border-b-2 border-transparent 
                                 lg:p-4 duration-250 font-dosis hover:border-brandBrown' %>
-                    <%= link_to t('skills'), skills_path,
+                  <%= link_to t('skills'), skills_path,
                         data: {action: "click->dropdown#toggle"},
                         class: 'block px-8 py-2 mb-1 text-xl font-medium text-gray-500
                                 transition ease-in-out border-b-2 border-transparent 
@@ -74,7 +72,7 @@
     </nav>
     <div data-controller="extended-modal" class="pr-4 lg:pl-8">
       <span class="inline-flex rounded-md shadow-md">
-        <span class="inline-flex rounded-md shadow-xs">    
+        <span class="inline-flex rounded-md shadow-xs">
           <%= link_to "Contact", new_contact_path,
               data: { action: "click->extended-modal#open", remote: true },
               class: "font-dosis text-xl text-white inline-flex items-center px-0 md:px-4 py-2 font-medium leading-6 transition duration-150 ease-in-out bg-brandGreen border border-transparent rounded-md hover:text-brandBrown focus:outline-none focus:shadow-outline-brandYellow" %>
