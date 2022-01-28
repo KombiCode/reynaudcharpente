@@ -22,7 +22,8 @@ module.exports = {
         akaya: "Akaya Telivigala",
         adventpro: ["AdventPro", "sans-serif"],
         dosis: ["Dosis", "sans-serif"],
-        signika: ["Signika", "sans-serif"]
+        signika: ["Signika", "sans-serif"],
+        jost: ["Jost", "sans-serif"]
       }
     },
   }
