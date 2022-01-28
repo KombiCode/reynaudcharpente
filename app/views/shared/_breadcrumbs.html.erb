@@ -1,10 +1,10 @@
 <nav class="flex bg-white border-t border-b border-gray-200" aria-label="Breadcrumb">
 <!--  <ol class="flex px-4 mx-auto space-x-4 sm:px-6 lg:px-8"> -->
-  <ol class="flex mx-auto space-x-2 md:mx-0 md:px-12 md:space-x-4">
+  <ol class="flex mx-auto space-x-2 font-jost md:mx-0 md:px-12 md:space-x-4">
     <% if breadcrumbs.count > 0 %>
       <li class="flex">
         <div class="flex items-center">
-          <a href="/" class="font-medium text-gray-500 font-dosis hover:text-brandBrown">
+          <a href="/" class="font-medium text-gray-500 hover:text-brandBrown">
             <%= t('home_page') %>
           </a>
         </div>
@@ -17,9 +17,9 @@
                 <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z"></path>
         </svg>
         <% if crumb.link? %>
-          <%= link_to crumb.name, crumb.path, class: "ml-4 font-medium font-dosis text-gray-500 hover:text-brandBrown" %>
+          <%= link_to crumb.name, crumb.path, class: "ml-4 font-medium text-gray-500 hover:text-brandBrown" %>
         <% else %>
-          <span class="ml-4 font-semibold font-dosis text-brandBrown md:ml-2">
+          <span class="ml-4 font-semibold text-brandBrown md:ml-2">
             <%= crumb.name %>
           </span>
         <% end %>

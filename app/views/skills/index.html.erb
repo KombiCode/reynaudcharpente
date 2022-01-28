@@ -1,10 +1,10 @@
 <div class="max-w-3xl mx-auto mt-8" data-controller="accordion">
-  <div class="flex flex-col items-baseline p-4 space-y-6 rounded shadow-lg">
+  <div class="flex flex-col items-baseline p-4 space-y-6 rounded shadow-lg font-jost">
     <% @skills.each_with_index do |skill, i| %>
       <div class="flex items-center justify-between w-full pb-2 text-gray-700 border-b border-gray-200 cursor-pointer"
         data-accordion-target="title" data-action="click->accordion#change">
         <div class="flex">
-          <h1 class="mb-2 text-4xl font-akaya text-brandBrown">
+          <h1 class="mb-2 text-4xl text-brandBrown">
               <%= skill.title %>
           </h1>
         </div>
@@ -14,7 +14,7 @@
           </svg>
         </div>
       </div>
-      <p class="hidden text-lg accordion-content font-dosis" data-accordion-target="body">
+      <p class="hidden text-lg accordion-content" data-accordion-target="body">
         <%= skill.description %>
       </p>
     <% end %>
