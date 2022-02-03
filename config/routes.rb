@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :employees, only: [ :index ]
   resources :skills, only: [ :index ]
 
+  resources :zipcodes, only: :index
+
 end

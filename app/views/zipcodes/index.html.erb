@@ -1,0 +1,3 @@
+<% @zipcodes.each do |zipcode| %>
+  <%= content_tag :li, "#{zipcode.code} - #{zipcode.name}", role: :option, data: { "autocomplete-value": zipcode.id } %>
+<% end %>

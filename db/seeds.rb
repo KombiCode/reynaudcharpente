@@ -10,6 +10,7 @@ puts "Cleaning database"
 Message.destroy_all
 Contact.destroy_all
 Employee.destroy_all
+Zipcode.destroy_all
 
 puts "Add employees"
 Employee.create(
@@ -67,5 +68,29 @@ Skill.create(
   description: "C’est l’un des domaines où la rapidité de chantier grâce à la technique ossature bois prend tout son sens. La préfabrication des éléments permet de limiter au minimum la durée des travaux. Le poids de la solution ossature bois -bien plus légère que les solutions maçonnées – est un grand avantage et permet d’agrandir quasiment toutes les maisons par le haut. Vous bénéficiez de volumes habitables en plus, sans avoir réduit votre jardin."
 )
 puts "#{Skill.count} skills have been created"
+
+
+puts "Add zipcodes"
+require 'json'
+
+file = File.read('./codes_postaux.json')
+object = JSON.parse(file, object_class: OpenStruct)
+
+data_array = []
+object.each { |elt|
+  data = { cp: elt.cp,
+           nc: elt.nc }
+  data_array << data
+}
+uniq_data = data_array.uniq
+
+uniq_data.each { |data|
+  Zipcode.create(
+    code: data[:cp],
+    name: data[:nc]
+  )
+}
+
+puts "#{Zipcode.count} zipcodes have been created"
 
 puts "Database ready"
