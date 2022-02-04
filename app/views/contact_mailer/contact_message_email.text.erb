@@ -5,3 +5,5 @@ Coordonnées du contact:
 <%= @contact.name %>
 <%= @contact.phone %>
 <%= @contact.email %>
+<% zc_cn = Zipcode.find_by_id(@contact.zipcode_id) %>
+<%= "#{zc_cn.code} - #{zc_cn.name}" %>

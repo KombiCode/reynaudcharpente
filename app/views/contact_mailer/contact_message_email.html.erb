@@ -33,6 +33,8 @@
       <h5><%= @contact.name %></h5>
       <h6><%= @contact.phone %></h6>
       <p><%= @contact.email %></p>
+      <% zc_cn = Zipcode.find_by_id(@contact.zipcode_id) %>
+      <p><%= "#{zc_cn.code} - #{zc_cn.name}" %>
     </div>
   </body>
 </html>
