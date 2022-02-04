@@ -50,7 +50,8 @@
             <% human_attribute_project_schedules.each do |k, v| %>
               <li class="relative py-4">
                 <%= m.radio_button :project_schedule, k,  class: "sr-only peer" %>
-                <%= m.label "project_schedule_#{k}", v, class: "p-2 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-yellow-500 peer-checked:ring-2 peer-checked:border-transparent"%>
+                <%= m.label "project_schedule_#{k}", v,
+                    class: "p-2 bg-white border border-gray-300 rounded-lg cursor-pointer peer-checked:border-brandBrown peer-checked:border-2 peer-checked:border-transparent focus:outline-none hover:bg-gray-50 "%>
               </li>
             <% end %>
           </ul>
