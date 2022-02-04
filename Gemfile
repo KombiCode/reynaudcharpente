@@ -91,3 +91,5 @@ gem "view_component"
 # Required after upgrading from rails 7.0.0.alpha2 to rails 7.0.0
 # This fixed the isuue "Don't know how to build task 'assets:precompile'"
 gem 'sprockets-rails'
+
+gem 'algoliasearch-rails'

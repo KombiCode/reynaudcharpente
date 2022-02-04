@@ -42,6 +42,8 @@ en:
   send_message: "Send message"
   cancel: "Cancel"
   project_start: "You'd like to start your project"
+  zipcode_city: "Zipcode - City"
+  fillup_zipcode_city: "Start typing your zipcode, then choose from the list"
 
   message_sent: "Your message was successfully sent."
 
@@ -91,3 +93,6 @@ en:
             messages:
               format: "Message %{message}"
               blank: 'cannot be blank'
+            zipcode_id: 
+              format: "Zipcode and city %{message}"
+              blank: 'are not correctly filled'              

@@ -18,3 +18,6 @@ application.register('dropdown', Dropdown)
 
 import AccordionController from "./accordion_controller.js"
 application.register("accordion", AccordionController)
+
+import { Autocomplete } from 'stimulus-autocomplete'
+application.register('autocomplete', Autocomplete)
