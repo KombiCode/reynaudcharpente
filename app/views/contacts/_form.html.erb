@@ -1,4 +1,6 @@
-<%= form_with(model: contact, id: "contact_form", data: { extended_modal_target: 'form', remote: true }) do |form| %>
+<%= form_with(model: contact, id: "contact_form",
+              data: { extended_modal_target: 'form', remote: true }
+             ) do |form| %>
   <div class="px-4 pt-5 pb-4 sm:p-6 sm:pb-4 font-jost">
     <% if contact.errors.any? %>
       <div class="p-4 border border-red-600">
@@ -12,23 +14,27 @@
 
     <div class="form-group">
       <%= form.label :name, class: "label" %>
-      <%= form.text_field :name, autofocus: true, class: "input" %>
+      <%= form.text_field :name, autofocus: true, class: "input", autocomplete: "nope" %>
     </div>
 
     <div class="form-group">
       <%= form.label :email, class: "label" %>
-      <%= form.email_field :email, autocomplete: "email", class: "input" %>
+      <%= form.email_field :email, autocomplete: "email", class: "input", autocomplete: "nope"%>
     </div>
 
     <div class="form-group">
       <%= form.label :phone, class: "label" %>
-      <%= form.text_field :phone, class: "input" %>
+      <%= form.text_field :phone, class: "input", autocomplete: "nope" %>
     </div>
 
-    <div class="form-group" data-controller="autocomplete" data-autocomplete-url-value="zipcodes#index">
+    <div class="form-group" data-controller="autocomplete" autocomplete="nope"
+         data-autocomplete-min-length-value="2"
+         data-autocomplete-url-value="zipcodes#index">
       <%= form.label t('zipcode_city'), class: "label" %>
-      <input class="input" type="text" data-autocomplete-target="input"/>
-      <input type="hidden" name="zipcode_id" data-autocomplete-target="hidden"/>
+      <input class="input" type="text" 
+             data-autocomplete-target="input" autocomplete="nope"
+             placeholder="Tapez votre code postal puis selectionnez votre commune dans la liste" /> <!-- this placeholder does not support ruby variable, so directly puts the text -->
+      <input type="hidden" name="contact[zipcode_id]" id="zipcode_id" data-autocomplete-target="hidden"/>
       <ul class="list-group autocomplete" data-autocomplete-target="results" style="max-height: 10rem; overflow-y: scroll;"></ul>
     </div>
 
@@ -54,7 +60,7 @@
   </div>
 
   <div class="flex items-center px-4 mt-6 rounded-b font-jost">
-    <button type="submit" class="w-full px-4 py-2 mb-4 text-white rounded-sm bg-brandGreen">
+    <button type="submit" class="w-full px-4 py-2 mb-4 text-white rounded-sm bg-brandBrown">
       <%= t('send_message') %>
     </button>
   </div>

@@ -83,8 +83,9 @@ object.each { |elt|
   data_array << data
 }
 uniq_data = data_array.uniq
+uniq_data_sorted = uniq_data.sort_by { |elem| elem[:cp] }
 
-uniq_data.each { |data|
+uniq_data_sorted.each { |data|
   Zipcode.create(
     code: data[:cp],
     name: data[:nc]

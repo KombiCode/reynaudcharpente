@@ -27,7 +27,12 @@
     padding-bottom: .65rem;
   }
 
-  .input:focus,
+  .input:focus  {
+    @extend %focus-style;
+    @apply border-2 border-brandBrown;
+    outline: none;
+  }
+
   .input:hover {
     @extend %focus-style;
   }

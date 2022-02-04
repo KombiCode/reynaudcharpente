@@ -12,6 +12,7 @@ fr:
   cancel: "Annuler"
   project_start: "Vous souhaitez débuter votre projet"
   zipcode_city: "Code postal - Commune"
+  fillup_zipcode_city: "Tapez votre code postal puis selectionnez votre commune dans la liste"
 
   message_sent: "Votre message a bien été envoyé."
 
@@ -61,3 +62,6 @@ fr:
             messages:
               format: "Veuillez %{message}"
               blank: 'indiquer votre message'
+            zipcode_id: 
+              format: "Le code postal et la commune %{message}"
+              blank: 'ne sont pas correctement renseignés'
