@@ -92,3 +92,5 @@ gem "view_component"
 # This fixed the isuue "Don't know how to build task 'assets:precompile'"
 gem 'sprockets-rails'
 
+# Cloudinary
+gem 'cloudinary'
