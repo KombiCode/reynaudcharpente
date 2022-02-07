@@ -43,7 +43,7 @@ gem "bootsnap", ">= 1.4.4", require: false
 # gem "sassc-rails", "~> 2.1"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.2"
 
 group :development, :test do
   # Start debugger with binding.b [https://github.com/ruby/debug]
@@ -92,4 +92,3 @@ gem "view_component"
 # This fixed the isuue "Don't know how to build task 'assets:precompile'"
 gem 'sprockets-rails'
 
-gem 'algoliasearch-rails'
