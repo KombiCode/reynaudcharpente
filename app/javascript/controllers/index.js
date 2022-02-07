@@ -21,3 +21,8 @@ application.register("accordion", AccordionController)
 
 import { Autocomplete } from 'stimulus-autocomplete'
 application.register('autocomplete', Autocomplete)
+
+import Carousel from "stimulus-carousel"
+application.register("carousel", Carousel)
+
+ 

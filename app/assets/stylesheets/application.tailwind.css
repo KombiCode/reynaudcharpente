@@ -4,6 +4,13 @@
 @import './components/forms.css';
 @import './components/notifications.css';
 @import 'tailwindcss/utilities';
+@import "swiper/swiper-bundle";
+
+/* Override swiper button color */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+}
 
 /* Akaya font */
 @font-face {
