@@ -14,11 +14,12 @@ config.mutateApproach = 'sync'
 // Import icons
 import { faInfoCircle, faCheckCircle,
          faExclamationCircle, faExclamationTriangle,
-         faExternalLinkAlt, faTimes, faBars } from '@fortawesome/free-solid-svg-icons'
+         faExternalLinkAlt, faTimes,
+         faBars, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 library.add(faInfoCircle, faCheckCircle,
             faExclamationCircle, faExclamationTriangle,
-            faExternalLinkAlt, faTimes, faBars,
+            faExternalLinkAlt, faTimes, faBars, faAngleLeft,
             faFacebook)
 // Load icons
 dom.watch()

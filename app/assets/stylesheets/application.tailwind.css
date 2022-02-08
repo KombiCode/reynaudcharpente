@@ -6,6 +6,16 @@
 @import 'tailwindcss/utilities';
 @import "swiper/swiper-bundle";
 
+
+/* Error modal used for custom error pages */
+.errormodal-back {
+  @apply bg-gray-300;
+}
+
+.errormodal-content {
+  background-color: white;
+}
+
 /* Override swiper button color */
 .swiper-button-next,
 .swiper-button-prev {
