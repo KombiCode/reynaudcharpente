@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   resources :zipcodes, only: :index
 
+  resources :activities, only: [ :show ]
+
 end
