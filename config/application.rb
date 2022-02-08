@@ -27,5 +27,8 @@ module Reynaudcharpente
 
     config.action_mailer.asset_host = ENV['DOMAIN_FOR_CONTACTS_EMAIL']
 
+    # Below is for custom error pages management
+    config.exceptions_app = self.routes
+
   end
 end
