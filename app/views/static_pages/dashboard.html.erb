@@ -1,0 +1,16 @@
+<div class="flex mx-auto space-x-2 text-xl font-jost md:mx-0 md:px-12 md:space-x-4">
+  <% if current_user %>
+    <h1> Dashboard </h1>
+  <% else %>
+    <div data-controller="extended-modal" class="pr-4 lg:pl-8">
+      <span class="inline-flex rounded-md shadow-md">
+        <span class="inline-flex rounded-md shadow-xs">
+          <%= link_to "Log In", login_path,
+              data: { action: "click->extended-modal#open", remote: true },
+              class: " text-xl text-white inline-flex items-center px-0 md:px-4 py-0 leading-6 transition duration-150 ease-in-out bg-brandBrown border border-transparent rounded-md hover:text-brandBrown hover:bg-white focus:outline-none focus:shadow-outline-brandYellow" %>
+          <%= render 'sessions/modal' %>
+        </span>
+      </span>
+    </div>
+  <% end %>
+</div>

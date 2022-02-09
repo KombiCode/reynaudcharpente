@@ -1,0 +1,13 @@
+<% if current_user %>
+  <nav class="flex bg-white border-b border-gray-200" aria-label="AdminSession">
+    <div class="flex mx-auto space-x-2 text-lg font-light font-jost md:mx-0 md:px-12 md:space-x-4">
+      <%= current_user.email %>
+      <p>&nbsp;&nbsp;</p>
+      <%= link_to "Log out", logout_path,
+          class: " text-xl text-white inline-flex items-center px-0 md:px-4 py-0 leading-6 transition duration-150 ease-in-out bg-brandBrown border border-transparent rounded-md hover:text-brandBrown hover:bg-white focus:outline-none focus:shadow-outline-brandYellow" %>
+    </div>
+  </nav>
+<% end %>
+<div id="session-notifications"
+      class="fixed inset-0 px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
+</div>
