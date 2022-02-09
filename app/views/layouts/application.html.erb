@@ -46,9 +46,11 @@
 
   <body class="h-full antialiased leading-normal">
     <%= render "shared/navbar" %>
+    <%= render "shared/admin_session" %>
     <%= render "shared/breadcrumbs" %>
     <%= yield %>
-    <div id="bound-notifications" class="fixed inset-0 px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
+    <div id="bound-notifications"
+         class="fixed inset-0 px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
     </div>
   </body>
 </html>
