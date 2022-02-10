@@ -95,3 +95,5 @@ gem 'sprockets-rails'
 
 # Cloudinary
 gem 'cloudinary'
+
+gem 'pundit'
