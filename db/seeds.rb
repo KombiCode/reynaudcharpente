@@ -5,11 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
 puts "Cleaning database"
 Message.destroy_all
 Contact.destroy_all
 Employee.destroy_all
+Skill.destroy_all
 Zipcode.destroy_all
 
 puts "Add employees"
@@ -90,7 +90,7 @@ uniq_data_sorted.each { |data|
   # so in this case, create just a few records for Zipcode table
   limited_seeds = ENV['HEROKU_SEEDS_LIMITED']
   create_code = true
-  if limited_seeds && data[:cp].to_i < 38150 && data[:cp].to_i > 38190
+  if limited_seeds && (data[:cp].to_i < 38150 || data[:cp].to_i > 38190)
     create_code = false
   end
   if create_code
