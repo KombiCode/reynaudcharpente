@@ -68,6 +68,12 @@ en:
   error_internal_server_error_content: "Sorry, but something went wrong."
   error_back_to_site: "Back to the site"
 
+  action_add: "Add"
+  action_view: "View"
+  action_edit: "Edit"
+  action_delete: "Delete"
+  action_validate: "Validate"
+
   activerecord:
     models:
       contact: 'Contact'
@@ -83,6 +89,10 @@ en:
         asap: 'As soon as possible'
         begin: "I'm at the beginning of my project"
         midterm: "It's a mid/long term project"
+      employee:
+        name: 'Name'
+        job_title: "Job"
+        about: "About"
     errors:
       models:
         contact:

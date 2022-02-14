@@ -8,9 +8,9 @@
     <p class="mt-1 text-base text-gray-600"><%= employee.about %></p>
     <% if current_user && current_user.admin %>
       <% if admin_action == "show" %>
-        <%= link_to "View", employee_path(employee), class: "font-medium text-gray-500 hover:text-brandBrown" %>
+        <%= link_to t('action_view'), employee_path(employee), class: "font-medium text-gray-500 hover:text-brandBrown" %>
       <% elsif admin_action == "edit" %>
-        <%= link_to "Edit", edit_employee_path(employee), class: "font-medium text-gray-500 hover:text-brandBrown" %>
+        <%= link_to t('action_edit'), edit_employee_path(employee), class: "font-medium text-gray-500 hover:text-brandBrown" %>
       <% end %>
     <% end %>
   </div>

@@ -1,12 +1,35 @@
-<%= form_with model: @employee, class: "grid gap-2 max-w-prose m-auto" do |form| %>
-  <%= link_to "Back", employee_path(@employee) %>
+<%= form_with(model: @employee, id: "employee_form") do |form| %>
+  <div class="px-4 pt-5 pb-4 sm:p-6 sm:pb-4 font-jost">
+    <% if @employee.errors.any? %>
+      <div class="p-4 border border-red-600">
+        <ul>
+          <% @employee.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <div class="form-group">
+      <%= form.label :name, class: "label" %>
+      <%= form.text_field :name, autofocus: true, class: "input", autocomplete: "nope" %>
+    </div>
 
-    <%= form.label :job_title %>
-    <%= form.text_field :job_title %>
+    <div class="form-group">
+      <%= form.label :job_title, class: "label" %>
+      <%= form.text_field :job_title, class: "input", autocomplete: "nope"%>
+    </div>
 
+    <div class="form-group">
+      <%= form.label :about, class: "label" %>
+      <%= form.text_area :about, class: "input", rows: 6 %>
+    </div>
+  </div>
 
-  <%= form.button %>
+  <div class="flex items-center px-4 mt-6 rounded-b font-jost">
+    <button type="submit" class="w-full px-4 py-2 mb-4 text-white rounded-sm bg-brandBrown">
+      <%= t('action_validate') %>
+    </button>
+  </div>
+
 <% end %>
