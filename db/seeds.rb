@@ -86,10 +86,19 @@ uniq_data = data_array.uniq
 uniq_data_sorted = uniq_data.sort_by { |elem| elem[:cp] }
 
 uniq_data_sorted.each { |data|
-  Zipcode.create(
-    code: data[:cp],
-    name: data[:nc]
-  )
+  # For Heroku, rows are limited for 'Free' plan
+  # so in this case, create just a few records for Zipcode table
+  limited_seeds = ENV['HEROKU_SEEDS_LIMITED']
+  create_code = true
+  if limited_seeds && data[:cp].to_i < 38150 && data[:cp].to_i > 38190
+    create_code = false
+  end
+  if create_code
+    Zipcode.create(
+      code: data[:cp],
+      name: data[:nc]
+    )
+  end
 }
 
 puts "#{Zipcode.count} zipcodes have been created"
