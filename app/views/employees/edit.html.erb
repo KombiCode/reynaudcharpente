@@ -1,0 +1,12 @@
+<%= form_with model: @employee, class: "grid gap-2 max-w-prose m-auto" do |form| %>
+  <%= link_to "Back", employee_path(@employee) %>
+
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+
+    <%= form.label :job_title %>
+    <%= form.text_field :job_title %>
+
+
+  <%= form.button %>
+<% end %>
