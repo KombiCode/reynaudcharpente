@@ -37,6 +37,12 @@ fr:
   error_internal_server_error_content: "Désolé, une erreur interne est survenue."
   error_back_to_site: "Retour au site"
 
+  action_add: "Ajouter"
+  action_view: "Voir"
+  action_edit: "Editer"
+  action_delete: "Supprimer"
+  action_validate: "Valider"
+
   activerecord:
     models:
       contact: 'Contact'
@@ -52,6 +58,10 @@ fr:
         asap: 'Dès que possible'
         begin: 'Je suis au début de mon projet'
         midterm: "C'est un projet à moyen ou long terme"
+      employee:
+        name: 'Nom'
+        job_title: "Poste"
+        about: "A propos"
     errors:
       models:
         contact:
