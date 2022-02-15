@@ -1,3 +1,9 @@
+<% if current_user && current_user.admin %>
+  <div class="flex px-8 py-2 mx-auto text-lg font-light font-jost">
+    <%= link_to t('action_add'), new_employee_path,
+        class: " text-xl text-white inline-flex px-0 md:px-4 items-center bg-brandBrown rounded-md hover:text-brandBrown hover:bg-white" %>
+  </div>
+<% end %>
 <div id="employees" class="grid gap-8 p-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
   <% @employees.each do |employee| %>
     <%= render "employee", employee: employee, admin_action: "show" %>

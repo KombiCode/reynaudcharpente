@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   # Almost every application defines a route for the root path ("/") at the top of this file.
   # root "articles#index"
 
-  resources :employees, only: [ :index, :show, :edit, :update ]
+  resources :employees
+  # , only: [ :index, :show, :edit, :update, :destroy ]
   resources :skills, only: [ :index ]
 
   resources :zipcodes, only: :index
