@@ -12,6 +12,21 @@ class EmployeesController < ApplicationController
     add_breadcrumb(@employee.name)
   end
 
+  def new
+    @employee = Employee.new
+    authorize @employee
+  end
+
+  def create
+    @employee = Employee.new employee_params
+    authorize @employee
+    if @employee.save
+      redirect_to employees_path
+    else
+      render :new
+    end
+  end
+  
   def edit
     @employee = Employee.find params[:id]
     authorize @employee
@@ -28,6 +43,13 @@ class EmployeesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @employee = Employee.find params[:id]
+    authorize @employee
+    @employee.destroy
+    redirect_to employees_path
   end
 
   private
