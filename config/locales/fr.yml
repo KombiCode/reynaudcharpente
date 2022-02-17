@@ -78,3 +78,9 @@ fr:
             zipcode_id: 
               format: "Le code postal et la commune %{message}"
               blank: 'ne sont pas correctement renseignés'
+
+  shared:
+    footer:
+      about: "À propos"
+      privacy: "Confidentialité"
+      terms: "Conditions d’utilisation"
