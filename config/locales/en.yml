@@ -109,3 +109,9 @@ en:
             zipcode_id: 
               format: "Zipcode and city %{message}"
               blank: 'are not correctly filled'              
+
+  shared:
+    footer:
+      about: "About Us"
+      privacy: "Privacy Policy"
+      terms: "Terms of Service"
