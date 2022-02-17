@@ -18,8 +18,8 @@ Rails.application.routes.draw do
 
   scope controller: :static_pages do
     get :about
-    # get :terms
-    # get :privacy
+    get :terms
+    get :privacy
     get :history, to: 'static_pages#company_history', as: 'history'
     get 'kc-rc-yec-hed-mat', to: 'static_pages#dashboard', as: 'kc-rc-yec-hed-mat'
     end
