@@ -115,3 +115,11 @@ en:
       about: "About Us"
       privacy: "Privacy Policy"
       terms: "Terms of Service"
+
+  static_pages:
+    about:
+      title: "About Us"
+    privacy:
+      title: "Privacy Policy"
+    terms:
+      title: "Terms Of Service"

@@ -84,3 +84,11 @@ fr:
       about: "À propos"
       privacy: "Confidentialité"
       terms: "Conditions d’utilisation"
+
+  static_pages:
+    about:
+      title: "À propos"
+    privacy:
+      title: "Confidentialité"
+    terms:
+      title: "Conditions d’utilisation"
