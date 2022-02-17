@@ -1,11 +1,11 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
+@import './components/base.css';
 @import './components/accordion.css';
 @import './components/forms.css';
 @import './components/notifications.css';
 @import 'tailwindcss/utilities';
 @import "swiper/swiper-bundle";
-
 
 /* Error modal used for custom error pages */
 .errormodal-back {

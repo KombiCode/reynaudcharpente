@@ -49,14 +49,18 @@
     </style>
   </head>
 
-  <body class="h-full antialiased leading-normal">
-    <%= render "shared/navbar" %>
-    <%= render "shared/admin_session" %>
-    <%= render "shared/breadcrumbs" %>
-    <%= yield %>
-    <div id="bound-notifications"
-         class="fixed inset-0 px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
-    </div>
-    <%= render 'shared/footer' %>
+  <body class="h-full font-sans antialiased font-normal leading-normal bg-gray-50">
+    <main>
+      <%= render "shared/navbar" %>
+      <%= render "shared/admin_session" %>
+      <%= render "shared/breadcrumbs" %>
+      <%= yield %>
+      <div id="bound-notifications"
+          class="fixed inset-0 px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
+      </div>
+    </main>
+    <footer>
+      <%= render 'shared/footer' %>
+    </footer>
   </body>
 </html>

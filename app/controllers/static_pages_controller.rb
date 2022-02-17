@@ -5,4 +5,6 @@ class StaticPagesController < ApplicationController
   def company_history
     add_breadcrumb(t('breadcrumb_company'))
   end
+  def about
+  end
 end
