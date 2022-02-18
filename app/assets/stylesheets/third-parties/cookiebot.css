@@ -1,0 +1,49 @@
+/* Override font for whole dialog */
+#CybotCookiebotDialog { font-family: Jost!important; }
+
+/* Remove Cookiebot CMP branding */
+#CybotCookiebotDialogPoweredByText > a,
+#CookiebotWidget-widgetContent > div >
+div.CookiebotWidget-body > div >
+div.CookiebotWidget-main-logo > a {
+  display: none;
+}
+
+/* Override font for whole dialog */
+#CookiebotWidget { font-family: Jost!important; }
+
+/* Override consent details */
+#CookiebotWidget-widgetContent > div >
+div.CookiebotWidget-body > div >
+div.CookiebotWidget-consent-details > button {
+  @apply text-gray-500 hover:text-brandBrown;
+}
+
+/* Override icon svg color fill */
+#CookiebotWidget-widgetContent >
+div > div.CookiebotWidget-body >
+div > div.CookiebotWidget-consents-list >
+ul > li.CookiebotWidget-approved > div > svg > path {
+  fill: rgb(76 18 18);
+}
+
+/* Override whole style of widget change button */
+#CookiebotWidget-btn-change {
+  --tw-text-opacity: 1!important;
+  color: rgb(255 255 255 / var(--tw-text-opacity))!important;
+  background-color: rgb(76 18 18)!important;
+  border-width: 1px!important;
+  border-color: transparent!important;
+  border-radius: 0.375rem!important;
+}
+#CookiebotWidget-btn-change:hover {
+  --tw-text-opacity: 1!important;
+  color: rgb(76 18 18 / var(--tw-text-opacity))!important;
+  --tw-bg-opacity: 1!important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity))!important;
+}
+
+#CookiebotWidget-btn:disabled{
+  font-size: 1.5rem!important;
+  background-color: rgba(29, 156, 67, 0.192)!important;
+}
