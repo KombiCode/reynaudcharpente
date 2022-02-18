@@ -4,6 +4,7 @@
 @import './components/accordion.css';
 @import './components/forms.css';
 @import './components/notifications.css';
+@import './third-parties/cookiebot.css';
 @import 'tailwindcss/utilities';
 @import "swiper/swiper-bundle";
 
@@ -140,5 +141,4 @@
 }
 @import 'actiontext.css';
 
-#CybotCookiebotDialog { font-family: Jost!important; }
-#CybotCookiebotWidget { font-family: Jost!important; }
+
