@@ -1,11 +1,15 @@
 /* Override font for whole dialog */
 #CybotCookiebotDialog { font-family: Jost!important; }
 
-/* Remove Cookiebot CMP branding */
-#CybotCookiebotDialogPoweredByText > a,
+/* Remove Cookiebot CMP branding from widget */
 #CookiebotWidget-widgetContent > div >
 div.CookiebotWidget-body > div >
 div.CookiebotWidget-main-logo > a {
+  display: none;
+}
+
+/* Remove Cookiebot CMP branding from dialog */
+a#CybotCookiebotDialogPoweredbyCybot,div#CybotCookiebotDialogPoweredByText {
   display: none;
 }
 
