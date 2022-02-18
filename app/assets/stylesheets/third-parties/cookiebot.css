@@ -19,7 +19,8 @@ a#CybotCookiebotDialogPoweredbyCybot,div#CybotCookiebotDialogPoweredByText {
 /* Override consent details */
 #CookiebotWidget-widgetContent > div >
 div.CookiebotWidget-body > div >
-div.CookiebotWidget-consent-details > button {
+div.CookiebotWidget-consent-details > button,
+#CybotCookiebotDialogBodyEdgeMoreDetailsLink {
   @apply text-gray-500 hover:text-brandBrown;
 }
 
@@ -31,34 +32,15 @@ ul > li.CookiebotWidget-approved > div > svg > path {
   fill: rgb(76 18 18);
 }
 
-#CookiebotWidget-buttons, #CookiebotWidget-btn-withdraw, #CookiebotWidget-btn-change {
-  /* @apply focus:outline-none */
-  border-width: 1px!important;
-  border-color: transparent!important;
-  border-radius: 0.375rem!important;
-}
-
-.CookiebotWidget-close:focus,
-.CookiebotWidget-show-consent-details:focus,
-#CookiebotWidget-btn-withdraw:focus,
-#CookiebotWidget-btn-change:focus {
-  outline: 2px solid transparent!important;
-  outline-offset: 2px!important;
-}
-
-/* Override style of widget withdraw disabled button */
-#CookiebotWidget-btn-withdraw:disabled{
-  background-color: white!important;
-  --tw-text-opacity: 1!important;
-  color: rgb(107 114 128 / var(--tw-text-opacity))!important;
-}
-
 /* Override whole style of widget and dialog buttons */
+#CookiebotWidget-btn-withdraw,
 #CookiebotWidget-btn-change,
-#CookiebotWidget-btn-withdraw 
 #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll,
 #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection,
 #CybotCookiebotDialogBodyButtonDecline {
+  border-width: 1px!important;
+  border-color: transparent!important;
+  border-radius: 0.375rem!important;
   --tw-text-opacity: 1!important;
   color: rgb(255 255 255 / var(--tw-text-opacity))!important;
   background-color: rgb(76 18 18)!important;
@@ -73,9 +55,25 @@ ul > li.CookiebotWidget-approved > div > svg > path {
   --tw-bg-opacity: 1!important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity))!important;
 }
-
-#CybotCookiebotDialogBodyEdgeMoreDetailsLink {
-  @apply text-gray-500 hover:text-brandBrown;
+#CookiebotWidget-btn-withdraw:focus,
+#CookiebotWidget-btn-change:focus,
+#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:focus,
+#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection:focus,
+#CybotCookiebotDialogBodyButtonDecline:focus {
+  outline: 2px solid transparent!important;
+  outline-offset: 2px!important;
 }
 
+/* Override other focus in widget */
+.CookiebotWidget-close:focus,
+.CookiebotWidget-show-consent-details:focus {
+  outline: 2px solid transparent!important;
+  outline-offset: 2px!important;
+}
 
+/* Override style of widget withdraw disabled button */
+#CookiebotWidget-btn-withdraw:disabled{
+  background-color: white!important;
+  --tw-text-opacity: 1!important;
+  color: rgb(107 114 128 / var(--tw-text-opacity))!important;
+}
