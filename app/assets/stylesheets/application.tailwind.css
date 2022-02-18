@@ -7,6 +7,7 @@
 @import 'tailwindcss/utilities';
 @import "swiper/swiper-bundle";
 
+
 /* Error modal used for custom error pages */
 .errormodal-back {
   @apply bg-gray-300;
@@ -138,3 +139,5 @@
   src: url('Jost-VariableFont_wght.woff2') format("woff2");
 }
 @import 'actiontext.css';
+
+#CybotCookiebotDialog { font-family: Jost!important; }
