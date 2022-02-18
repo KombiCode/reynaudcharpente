@@ -1,8 +1,12 @@
-<div class="container mx-auto mt-8">
+<div class="container mx-auto mt-8 text-xl font-semibold font-jost">
   <h1><%= t(".title") %></h1>
+  <!-- Test CookieBot -->
+  <h1 class="mt-8 mb-4"><%= t(".cookies_info") %></h1>
+  <div class="text-sm font-light text-gray-500 lg:px-6">
+  <script id="CookieDeclaration"
+          src="https://consent.cookiebot.com/344337a3-0df1-4a31-985a-ace3d4073c4d/cd.js"
+          type="text/javascript" async>
+  </script>
+      <a href="javascript: Cookiebot.renew()">Renouveler ou modifier votre consentement aux cookies</a>
+  </div>
 </div>
-<!-- Test CookieBot -->
-<script id="CookieDeclaration"
-        src="https://consent.cookiebot.com/344337a3-0df1-4a31-985a-ace3d4073c4d/cd.js"
-        type="text/javascript" async>
-</script>
