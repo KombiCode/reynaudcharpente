@@ -77,3 +77,22 @@ ul > li.CookiebotWidget-approved > div > svg > path {
   --tw-text-opacity: 1!important;
   color: rgb(107 114 128 / var(--tw-text-opacity))!important;
 }
+
+#CybotCookiebotDialogDetailFooter > a {
+  @apply text-gray-500 hover:text-brandBrown;
+}
+
+/* #CybotCookiebotDialogNavDetails
+#CybotCookiebotDialogNavAbout
+
+#CybotCookiebotDialogNavDeclaration
+#CybotCookiebotDialogBodyLevelButtonPreferencesInline */
+
+#CybotCookiebotDialogTabContent input:checked+.CybotCookiebotDialogBodyLevelButtonSlider {
+  --tw-bg-opacity: 1!important;
+  background-color: rgb(76 18 18 / var(--tw-bg-opacity))!important;
+}
+#CybotCookiebotDialogTabContent .CybotCookiebotDialogBodyLevelButtonSlider {
+  --tw-bg-opacity: 1!important;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity))!important;
+}
