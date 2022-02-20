@@ -19,7 +19,9 @@ a#CybotCookiebotDialogPoweredbyCybot,div#CybotCookiebotDialogPoweredByText {
 /* Override consent details */
 #CookiebotWidget-widgetContent > div >
 div.CookiebotWidget-body > div >
-div.CookiebotWidget-consent-details > button,
+div.CookiebotWidget-consent-details > button {
+  @apply text-gray-500 hover:text-brandBrown;
+}
 #CybotCookiebotDialogBodyEdgeMoreDetailsLink {
   @apply text-gray-500 hover:text-brandBrown;
 }
@@ -85,6 +87,8 @@ ul > li.CookiebotWidget-approved > div > svg > path {
 /* #CybotCookiebotDialogNavDetails
 #CybotCookiebotDialogNavAbout
 
+#CybotCookiebotDialogBodyEdgeMoreDetailsLink
+
 #CybotCookiebotDialogNavDeclaration
 #CybotCookiebotDialogBodyLevelButtonPreferencesInline */
 
@@ -95,4 +99,11 @@ ul > li.CookiebotWidget-approved > div > svg > path {
 #CybotCookiebotDialogTabContent .CybotCookiebotDialogBodyLevelButtonSlider {
   --tw-bg-opacity: 1!important;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity))!important;
+}
+
+#CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(2) > label > span,
+#CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(3) > label > span,
+#CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(4) > label > span,
+#CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(5) > label > span {
+  @apply text-gray-500 hover:text-brandBrown;
 }
