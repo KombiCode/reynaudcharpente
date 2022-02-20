@@ -90,13 +90,15 @@ ul > li.CookiebotWidget-approved > div > svg > path {
 #CybotCookiebotDialogDetailBodyContentCookieContainerNecessary,
 #CybotCookiebotDialogDetailBodyContentCookieContainerPreference,
 #CybotCookiebotDialogDetailBodyContentCookieContainerStatistics,
-#CybotCookiebotDialogDetailBodyContentCookieContainerAdvertising {
+#CybotCookiebotDialogDetailBodyContentCookieContainerAdvertising,
+#CybotCookiebotDialogDetailBodyContentCookieContainerUnclassified {
   color: #6b7280!important;
 }
 #CybotCookiebotDialogDetailBodyContentCookieContainerNecessary:hover,
 #CybotCookiebotDialogDetailBodyContentCookieContainerPreference:hover,
 #CybotCookiebotDialogDetailBodyContentCookieContainerStatistics:hover,
-#CybotCookiebotDialogDetailBodyContentCookieContainerAdvertising:hover {
+#CybotCookiebotDialogDetailBodyContentCookieContainerAdvertising:hover,
+  #CybotCookiebotDialogDetailBodyContentCookieContainerUnclassified:hover {
   color: #4c1212!important;
 }
 #CybotCookiebotDialogDetailBodyContentCookieContainerNecessary:active,
@@ -106,11 +108,15 @@ ul > li.CookiebotWidget-approved > div > svg > path {
   color: #4c1212!important;
 }
 
-#CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieProvider.CybotCookiebotDialogCollapsed {
-  color: #4c1212!important;
+#CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieProvider.CybotCookiebotDialogCollapsed,
+#CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieLink,
+#CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieProvider {
+  color: #6b7280!important;
 }
 
-#CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieLink {
+#CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieProvider.CybotCookiebotDialogCollapsed:hover,
+#CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieLink:hover,
+#CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieProvider:hover {
   color: #4c1212!important;
 }
 
