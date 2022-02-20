@@ -86,10 +86,17 @@ ul > li.CookiebotWidget-approved > div > svg > path {
 }
 
 #CybotCookiebotDialogDetailFooter > a {
-  @apply text-gray-500 hover:text-brandBrown;
+  color: #6B7280!important;
+}
+#CybotCookiebotDialogDetailFooter > a:hover{
+  color: #4c1212!important;
 }
 
 /* #CybotCookiebotDialogNavDetails
+
+
+#CybotCookiebotDialogNavDetails
+
 #CybotCookiebotDialogNavAbout
 
 #CybotCookiebotDialogBodyEdgeMoreDetailsLink
@@ -97,6 +104,19 @@ ul > li.CookiebotWidget-approved > div > svg > path {
 #CybotCookiebotDialogNavDeclaration
 #CybotCookiebotDialogBodyLevelButtonPreferencesInline */
 
+
+/* Nav items link */
+#CybotCookiebotDialogNav .CybotCookiebotDialogNavItemLink {
+  border-bottom: 1px solid #ffffff!important;
+  color: #6B7280!important;
+}
+#CybotCookiebotDialogNav .CybotCookiebotDialogNavItemLink.CybotCookiebotDialogActive {
+  border-bottom: 1px solid #4c1212!important;
+  color: #4c1212!important;
+}
+
+#CybotCookiebotDialogDetailFooter > a
+/* Slider buttons */
 #CybotCookiebotDialogTabContent input:checked+.CybotCookiebotDialogBodyLevelButtonSlider {
   --tw-bg-opacity: 1!important;
   background-color: rgb(76 18 18 / var(--tw-bg-opacity))!important;
@@ -105,7 +125,7 @@ ul > li.CookiebotWidget-approved > div > svg > path {
   --tw-bg-opacity: 1!important;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity))!important;
 }
-
+/* Labels for slider buttons  */
 #CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(2) > label > span,
 #CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(3) > label > span,
 #CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(4) > label > span,
