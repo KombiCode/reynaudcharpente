@@ -90,13 +90,19 @@ ul > li.CookiebotWidget-approved > div > svg > path {
 #CybotCookiebotDialogDetailBodyContentCookieContainerNecessary,
 #CybotCookiebotDialogDetailBodyContentCookieContainerPreference,
 #CybotCookiebotDialogDetailBodyContentCookieContainerStatistics,
-#CybotCookiebotDialogDetailBodyContentCookieContainerMarketing {
+#CybotCookiebotDialogDetailBodyContentCookieContainerAdvertising {
   color: #6b7280!important;
 }
 #CybotCookiebotDialogDetailBodyContentCookieContainerNecessary:hover,
 #CybotCookiebotDialogDetailBodyContentCookieContainerPreference:hover,
 #CybotCookiebotDialogDetailBodyContentCookieContainerStatistics:hover,
-#CybotCookiebotDialogDetailBodyContentCookieContainerMarketing:hover {
+#CybotCookiebotDialogDetailBodyContentCookieContainerAdvertising:hover {
+  color: #4c1212!important;
+}
+#CybotCookiebotDialogDetailBodyContentCookieContainerNecessary:active,
+#CybotCookiebotDialogDetailBodyContentCookieContainerPreference:active,
+#CybotCookiebotDialogDetailBodyContentCookieContainerStatistics:active,
+#CybotCookiebotDialogDetailBodyContentCookieContainerAdvertising:active {
   color: #4c1212!important;
 }
 
