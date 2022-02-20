@@ -86,16 +86,21 @@ ul > li.CookiebotWidget-approved > div > svg > path {
 }
 
 /* Override dialog details buttons */
-#CybotCookiebotDialogBodyLevelButtonNecessaryInline,
-#CybotCookiebotDialogBodyLevelButtonPreferencesInline,
-#CybotCookiebotDialogBodyLevelButtonStatisticsInline,
-#CybotCookiebotDialogBodyLevelButtonMarketingInline {
+
+#CybotCookiebotDialogDetailBodyContentCookieContainerNecessary,
+#CybotCookiebotDialogDetailBodyContentCookieContainerPreference,
+#CybotCookiebotDialogDetailBodyContentCookieContainerStatistics,
+#CybotCookiebotDialogDetailBodyContentCookieContainerMarketing {
   color: #6b7280!important;
 }
-#CybotCookiebotDialogBodyLevelButtonNecessaryInline:hover,
-#CybotCookiebotDialogBodyLevelButtonPreferencesInline:hover,
-#CybotCookiebotDialogBodyLevelButtonStatisticsInline:hover,
-#CybotCookiebotDialogBodyLevelButtonMarketingInline:hover {
+#CybotCookiebotDialogDetailBodyContentCookieContainerNecessary:hover,
+#CybotCookiebotDialogDetailBodyContentCookieContainerPreference:hover,
+#CybotCookiebotDialogDetailBodyContentCookieContainerStatistics:hover,
+#CybotCookiebotDialogDetailBodyContentCookieContainerMarketing:hover {
+  color: #4c1212!important;
+}
+
+#CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieProvider.CybotCookiebotDialogCollapsed {
   color: #4c1212!important;
 }
 
