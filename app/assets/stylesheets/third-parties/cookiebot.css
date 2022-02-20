@@ -120,6 +120,13 @@ ul > li.CookiebotWidget-approved > div > svg > path {
   color: #4c1212!important;
 }
 
+#CybotCookiebotDialogDetailBodyContentCookieTabsUnclassified > div > div > div > a {
+  color: #6b7280!important;
+}
+#CybotCookiebotDialogDetailBodyContentCookieTabsUnclassified > div > div > div > a:hover {
+  color: #4c1212!important;
+}
+
 /* Nav items link */
 #CybotCookiebotDialogNav .CybotCookiebotDialogNavItemLink {
   border-bottom: 1px solid white!important;
