@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   root "static_pages#home"
-  # get 'history', to: 'static_pages#company_history', as: 'history'
-  # get 'kc-rc-yec-hed-mat', to: 'static_pages#dashboard', as: 'kc-rc-yec-hed-mat'
 
   resources :contacts, only: [ :new, :create, :index ]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -17,6 +15,9 @@ Rails.application.routes.draw do
   resources :activities, only: [ :index, :show, :edit, :update]
 
   scope controller: :static_pages do
+    get :news
+    get :achievements
+    get :opinions
     get :about
     get :terms
     get :privacy

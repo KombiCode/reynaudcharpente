@@ -118,6 +118,12 @@ en:
       terms: "Terms of Service"
 
   static_pages:
+    news:
+      title: "News"
+    achievements:
+      title: "Achievements"
+    opinions:
+      title: "Opinions"
     about:
       title: "About Us"
     privacy:
