@@ -87,6 +87,12 @@ fr:
       terms: "Conditions d’utilisation"
 
   static_pages:
+    news:
+      title: "Actualités"
+    achievements:
+      title: "Réalisations"
+    opinions:
+      title: "Avis clients"
     about:
       title: "À propos"
     privacy:
