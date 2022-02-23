@@ -7,6 +7,8 @@
 @import './third-parties/cookiebot.css';
 @import 'tailwindcss/utilities';
 @import "swiper/swiper-bundle";
+@import 'trix/dist/trix.css';
+@import 'actiontext.css';
 
 
 /* Error modal used for custom error pages */
@@ -139,6 +141,6 @@
   font-display: optional;
   src: url('Jost-VariableFont_wght.woff2') format("woff2");
 }
-@import 'actiontext.css';
+
 
 

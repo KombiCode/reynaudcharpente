@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :zipcodes, only: :index
 
-  resources :activities, only: [ :show ]
+  resources :activities, only: [ :index, :show, :edit, :update]
 
   scope controller: :static_pages do
     get :about
@@ -30,6 +30,9 @@ Rails.application.routes.draw do
   get "signup" => "users#new", :as => "signup"
   resources :users
   resources :sessions
+  
+  # Embed
+  resource :embed, only: :update
   
   # Errors pages 
   match "/404", :to => "errors#not_found", :via => :all

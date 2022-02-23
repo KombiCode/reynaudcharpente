@@ -61,6 +61,7 @@ en:
   breadcrumb_company: "Company"
   breadcrumb_employees: "Team"
   breadcrumb_skills: "Skills"
+  breadcrumb_activities: "Activities"
 
   error_not_found_title: "Page not found"
   error_not_found_content: "Looks like you've followed a broken link or entered a URL that doesn't exist on this site."

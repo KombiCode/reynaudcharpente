@@ -30,6 +30,7 @@ fr:
   breadcrumb_company: "L'Entreprise"
   breadcrumb_employees: "Equipe"
   breadcrumb_skills: "Compétences"
+  breadcrumb_activities: "Activités"
 
   error_not_found_title: "Page non trouvée"
   error_not_found_content: "Il semble que vous ayez suivi un lien défectueux ou entré une URL qui n'existe pas."
