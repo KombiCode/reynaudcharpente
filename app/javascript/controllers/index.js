@@ -19,6 +19,9 @@ application.register('dropdown', Dropdown)
 import AccordionController from "./accordion_controller.js"
 application.register("accordion", AccordionController)
 
+import TrixYoutubePluginController from "./trix_youtube_plugin_controller.js"
+application.register("trix-youtube-plugin", TrixYoutubePluginController)
+
 import { Autocomplete } from 'stimulus-autocomplete'
 application.register('autocomplete', Autocomplete)
 
