@@ -16,11 +16,11 @@ import { faInfoCircle, faCheckCircle,
          faExclamationCircle, faExclamationTriangle,
          faExternalLinkAlt, faTimes,
          faBars, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
-import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faInstagram, faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
 library.add(faInfoCircle, faCheckCircle,
             faExclamationCircle, faExclamationTriangle,
             faExternalLinkAlt, faTimes, faBars, faAngleLeft,
-            faFacebook)
+            faFacebook, faInstagram, faInstagramSquare)
 // Load icons
 dom.watch()
 

@@ -1,54 +1,26 @@
 <div class="px-2 py-4 text-sm font-light text-gray-500 footer lg:px-16 font-jost">
   <div class="flex flex-col-reverse p-4 text-sm lg:flex-row lg:justify-between lg:p-0">
+    <!-- Logo and copyright -->
     <div class="flex items-center justify-center">
       <%= link_to root_path, class: "hidden sm:inline-block" do %>
         <%= render_svg 'rc-logo03', styles: "fill-current h-8 w-8 text-gray-600 hover:text-gray-700" %>
       <% end %>
       <div class="ml-4 text-gray-700">© <%= Date.current.year %> Reynaud Charpente</div>
     </div>
-
-    <div class="flex flex-wrap justify-center">
+    <!-- Social media icons links -->
+    <div class="flex flex-wrap items-center justify-center space-x-4" >
+      <a href="https://www.facebook.com/JFReynaudCharpente/?ref=aymt_homepage_panel">
+        <i class="text-gray-400 cursor-pointer hover:text-socialFacebook fab fa-facebook fa-lg"></i>
+      </a>
+      <a href="https://www.instagram.com/reynaud.charpente/">
+        <i class="text-gray-400 cursor-pointer hover:text-socialInstagram fab fa-instagram fa-lg"></i>
+      </a>
+    </div>
+    <!-- Mentions -->
+    <div class="flex flex-wrap items-center justify-center">
       <%= link_to t(".about"), about_path, class: "hover:text-brandBrown no-underline block px-4 lg:my-0 my-2" %>
       <%= link_to t(".privacy"), privacy_path, class: "hover:text-brandBrown no-underline block lg:my-0 my-2 px-4" %>
       <%= link_to t(".terms"), terms_path, class: "hover:text-brandBrown no-underline block lg:my-0 my-2 px-4" %>
     </div>
   </div>
 </div>
-<!-- Below script for testing Cookie Control CMP -->
-<% if false %>
-<script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"></script>
-<script>
-    var config = {
-        apiKey: '1070acb473720eaaf30ad4eff0869cebc06a06d7',
-        product: 'COMMUNITY',
-        optionalCookies: [
-            {
-                    name: 'analytics',
-                    label: 'Analytics',
-                    description: '',
-                    cookies: [],
-                    onAccept : function(){},
-                    onRevoke: function(){}
-                },{
-                    name: 'marketing',
-                    label: 'Marketing',
-                    description: '',
-                    cookies: [],
-                    onAccept : function(){},
-                    onRevoke: function(){}
-                },{
-                    name: 'preferences',
-                    label: 'Preferences',
-                    description: '',
-                    cookies: [],
-                    onAccept : function(){},
-                    onRevoke: function(){}
-                }
-        ],
-        position: "LEFT",
-        theme: "LIGHT"
-      };
-    
-    CookieControl.load( config );
-</script>
-<% end %>
