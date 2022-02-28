@@ -1,3 +1,12 @@
+/* Define our colors */
+.CybotCookiebotDialogContentWrapper,
+.CookiebotWidget-open {
+  --cookie-grayed-color: #6b7280;
+  --cookie-brandBrown-color: #4c1212;
+  --cookie-brandGreen-color: #a1d02f;
+  --cookie-active-color: var(--cookie-brandGreen-color);
+}
+
 /* Override font for whole dialog */
 #CybotCookiebotDialog { font-family: Jost!important; }
 
@@ -17,22 +26,23 @@ a#CybotCookiebotDialogPoweredbyCybot,div#CybotCookiebotDialogPoweredByText {
 #CookiebotWidget { font-family: Jost!important; }
 
 /* Override consent details */
-#CookiebotWidget-widgetContent > div >
-div.CookiebotWidget-body > div >
-div.CookiebotWidget-consent-details > button {
-  @apply text-gray-500 hover:text-brandBrown;
+.CookiebotWidget-consent-details > button {
+  color: var(--cookie-grayed-color)!important;
+}
+.CookiebotWidget-consent-details > button:hover {
+  color: var(--cookie-active-color)!important;
 }
 #CybotCookiebotDialogBodyEdgeMoreDetailsLink {
-  color: #6b7280!important;
+  color: var(--cookie-grayed-color)!important;
 }
 #CybotCookiebotDialogBodyEdgeMoreDetailsLink:hover {
-  color: #4c1212!important;
+  color: var(--cookie-active-color)!important;
 }
 #CybotCookiebotDialogDetailFooter > a {
-  color: #6b7280!important;
+  color: var(--cookie-grayed-color)!important;
 }
 #CybotCookiebotDialogDetailFooter > a:hover{
-  color: #4c1212!important;
+  color: var(--cookie-active-color)!important;
 }
 
 /* Override icon svg color fill */
@@ -40,7 +50,7 @@ div.CookiebotWidget-consent-details > button {
 div > div.CookiebotWidget-body >
 div > div.CookiebotWidget-consents-list >
 ul > li.CookiebotWidget-approved > div > svg > path {
-  fill: #4c1212;
+  fill: var(--cookie-active-color)!important;
 }
 
 /* Override whole style of widget and dialog buttons */
@@ -53,14 +63,14 @@ ul > li.CookiebotWidget-approved > div > svg > path {
   border-color: transparent!important;
   border-radius: 0.375rem!important;
   color: white!important;
-  background-color: #4c1212!important;
+  background-color: var(--cookie-active-color)!important;
 }
 #CookiebotWidget-btn-change:hover,
 #CookiebotWidget-btn-withdraw:hover,
 #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:hover,
 #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection:hover,
 #CybotCookiebotDialogBodyButtonDecline:hover {
-  color: #4c1212!important;
+  color: var(--cookie-active-color)!important;
   background-color: white!important;
 }
 #CookiebotWidget-btn-withdraw:focus,
@@ -82,7 +92,7 @@ ul > li.CookiebotWidget-approved > div > svg > path {
 /* Override style of widget withdraw disabled button */
 #CookiebotWidget-btn-withdraw:disabled{
   background-color: white!important;
-  color: #6b7280!important;
+  color: var(--cookie-grayed-color)!important;
 }
 
 /* Override dialog details buttons */
@@ -92,72 +102,72 @@ ul > li.CookiebotWidget-approved > div > svg > path {
 #CybotCookiebotDialogDetailBodyContentCookieContainerStatistics,
 #CybotCookiebotDialogDetailBodyContentCookieContainerAdvertising,
 #CybotCookiebotDialogDetailBodyContentCookieContainerUnclassified {
-  color: #6b7280!important;
+  color: var(--cookie-grayed-color)!important;
 }
 #CybotCookiebotDialogDetailBodyContentCookieContainerNecessary:hover,
 #CybotCookiebotDialogDetailBodyContentCookieContainerPreference:hover,
 #CybotCookiebotDialogDetailBodyContentCookieContainerStatistics:hover,
 #CybotCookiebotDialogDetailBodyContentCookieContainerAdvertising:hover,
-  #CybotCookiebotDialogDetailBodyContentCookieContainerUnclassified:hover {
-  color: #4c1212!important;
+#CybotCookiebotDialogDetailBodyContentCookieContainerUnclassified:hover {
+  color: var(--cookie-active-color)!important;
 }
 #CybotCookiebotDialogDetailBodyContentCookieContainerNecessary:active,
 #CybotCookiebotDialogDetailBodyContentCookieContainerPreference:active,
 #CybotCookiebotDialogDetailBodyContentCookieContainerStatistics:active,
 #CybotCookiebotDialogDetailBodyContentCookieContainerAdvertising:active {
-  color: #4c1212!important;
+  color: var(--cookie-active-color)!important;
 }
 
 #CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieProvider.CybotCookiebotDialogCollapsed,
 #CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieLink,
 #CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieProvider {
-  color: #6b7280!important;
+  color: var(--cookie-grayed-color)!important;
 }
 
 #CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieProvider.CybotCookiebotDialogCollapsed:hover,
 #CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieLink:hover,
 #CybotCookiebotDialogDetailBodyContentCookieTabsNecessary > div > div > div > a.CybotCookiebotDialogDetailBodyContentCookieProvider:hover {
-  color: #4c1212!important;
+  color: var(--cookie-active-color)!important;
 }
 
 #CybotCookiebotDialogDetailBodyContentCookieTabsUnclassified > div > div > div > a {
-  color: #6b7280!important;
+  color: var(--cookie-grayed-color)!important;
 }
 #CybotCookiebotDialogDetailBodyContentCookieTabsUnclassified > div > div > div > a:hover {
-  color: #4c1212!important;
+  color: var(--cookie-active-color)!important;
 }
 
 /* Nav items link */
 #CybotCookiebotDialogNav .CybotCookiebotDialogNavItemLink {
   border-bottom: 1px solid white!important;
-  color: #6b7280!important;
+  color: var(--cookie-grayed-color)!important;
 }
 #CybotCookiebotDialogNav .CybotCookiebotDialogNavItemLink:hover {
   border-bottom: 1px solid white!important;
-  color: #4c1212!important;
+  color: var(--cookie-active-color)!important;
 }
 #CybotCookiebotDialogNav .CybotCookiebotDialogNavItemLink.CybotCookiebotDialogActive {
-  border-bottom: 1px solid #4c1212!important;
-  color: #4c1212!important;
+  border-bottom: 1px solid   var(--cookie-active-color)!important;
+  color: var(--cookie-active-color)!important;
 }
 
 /* Slider buttons */
 #CybotCookiebotDialogTabContent input:checked+.CybotCookiebotDialogBodyLevelButtonSlider {
-  background-color: #4c1212!important;
+  background-color: var(--cookie-active-color)!important;
 }
 #CybotCookiebotDialogTabContent .CybotCookiebotDialogBodyLevelButtonSlider {
-  background-color: #6b7280!important;
+  background-color: var(--cookie-grayed-color)!important;
 }
 /* Labels for slider buttons  */
 #CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(2) > label > span,
 #CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(3) > label > span,
 #CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(4) > label > span,
 #CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(5) > label > span {
-  color: #6b7280!important;
+  color: var(--cookie-grayed-color)!important;
 }
 #CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(2) > label > span:hover,
 #CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(3) > label > span:hover,
 #CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(4) > label > span:hover,
 #CybotCookiebotDialogBodyLevelButtonsSelectPane > fieldset > div:nth-child(5) > label > span:hover {
-  color: #4c1212;
+  color: var(--cookie-active-color)!important;
 }
