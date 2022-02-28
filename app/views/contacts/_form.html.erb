@@ -50,7 +50,7 @@
             <% human_attribute_project_schedules.each do |k, v| %>
               <li class="relative py-4">
                 <%= m.radio_button :project_schedule, k,  class: "sr-only peer" %>
-                <%= m.label "project_schedule_#{k}", v, class: "p-2 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:border-2 peer-checked:border-brandBrown"%>
+                <%= m.label "project_schedule_#{k}", v, class: "p-2 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:border-2 peer-checked:border-brandActive"%>
               </li>
             <% end %>
           </ul>
@@ -60,7 +60,7 @@
   </div>
 
   <div class="flex items-center px-4 mt-6 rounded-b font-jost">
-    <button type="submit" class="w-full px-4 py-2 mb-4 text-white rounded-sm bg-brandBrown">
+    <button type="submit" class="w-full px-4 py-2 mb-4 text-white rounded-sm bg-brandActive">
       <%= t('send_message') %>
     </button>
   </div>

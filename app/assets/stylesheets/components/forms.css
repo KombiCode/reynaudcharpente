@@ -18,7 +18,7 @@
   }
   
   .autocomplete li:hover {
-    @apply text-white hover:bg-brandBrown;
+    @apply text-white hover:bg-brandActive;
   }
 
   .input {
@@ -29,7 +29,7 @@
 
   .input:focus  {
     @extend %focus-style;
-    @apply border-2 border-brandBrown;
+    @apply border-2 border-brandActive;
     outline: none;
   }
 
