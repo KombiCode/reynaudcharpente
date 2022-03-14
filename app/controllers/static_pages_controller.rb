@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
                 {
                   lat: 45.269936,
                   lng: 5.8918449,
-                  image_url: helpers.asset_url("rc-logo-color"),
+                  image_url: helpers.image_url("rc-logo-color.svg"),
                   info_window: render_to_string(partial: "info_window",
                                                 locals: { place: { name: t(".office_name"),
                                                                    address: t(".office_address")
@@ -15,7 +15,7 @@ class StaticPagesController < ApplicationController
                 {
                   lat: 45.2199478,
                   lng: 5.8586923,
-                  image_url: helpers.asset_url("rc-logo-color"),
+                  image_url: helpers.image_url("rc-logo-color.svg"),
                   info_window: render_to_string(partial: "info_window",
                                                 locals: { place: { name: t(".workshop_name"),
                                                                    address: t(".workshop_address")
