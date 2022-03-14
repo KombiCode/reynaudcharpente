@@ -13,6 +13,7 @@
     "autoprefixer": "^10.4.0",
     "cable_ready": "^5.0.0-pre8",
     "esbuild": "^0.14.1",
+    "mapbox-gl": "^2.7.0",
     "mrujs": "^0.7.2",
     "postcss": "^8.4.4",
     "postcss-import": "^14.0.2",

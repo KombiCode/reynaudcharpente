@@ -1,0 +1,7 @@
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  @apply text-center text-gray-700 font-jost;
+}
