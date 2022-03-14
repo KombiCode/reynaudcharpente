@@ -121,7 +121,7 @@ en:
     home: 
       office_name: "Office"
       office_address: "1036 avenue Ambroise Croizat 38920 CROLLES"
-      wokshop_name: "Workshop"
+      workshop_name: "Workshop"
       workshop_address: "554 rue de l'Oiseau 38420 LE VERSOUD"
     news:
       title: "News"
