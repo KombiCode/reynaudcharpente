@@ -103,4 +103,19 @@ uniq_data_sorted.each { |data|
 
 puts "#{Zipcode.count} zipcodes have been created"
 
+puts "Add activities"
+Activity.create(
+  name: "Avant Projet"
+)
+Activity.create(
+  name: "Neuf"
+)
+Activity.create(
+  name: "Rénovation"
+)
+Activity.create(
+  name: "Auto Construction"
+)
+puts "#{Activity.count} activities have been created"
+
 puts "Database ready"
