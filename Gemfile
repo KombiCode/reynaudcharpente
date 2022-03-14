@@ -97,3 +97,5 @@ gem 'sprockets-rails'
 gem 'cloudinary'
 
 gem 'pundit'
+
+gem 'invisible_captcha'

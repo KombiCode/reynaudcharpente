@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   include CableReady::Broadcaster
+  invisible_captcha only: [:create, :update], honeypot: :subtitle
 
   def index
     @contacts = Contact.all
@@ -16,7 +17,6 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-
     if @contact.save
       flash = {
         title: t('message_sent'),
