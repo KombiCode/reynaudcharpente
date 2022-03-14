@@ -11,6 +11,7 @@ Contact.destroy_all
 Employee.destroy_all
 Skill.destroy_all
 Zipcode.destroy_all
+Activity.destroy_all
 
 puts "Add employees"
 Employee.create(
