@@ -87,6 +87,11 @@ fr:
       terms: "Conditions d’utilisation"
 
   static_pages:
+    home: 
+      office_name: "Bureau"
+      office_address: "1036 avenue Ambroise Croizat 38920 CROLLES"
+      wokshop_name: "Atelier"
+      workshop_address: "554 rue de l'Oiseau 38420 LE VERSOUD"
     news:
       title: "Actualités"
     achievements:

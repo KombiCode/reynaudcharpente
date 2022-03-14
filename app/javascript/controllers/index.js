@@ -28,4 +28,6 @@ application.register('autocomplete', Autocomplete)
 import Carousel from "stimulus-carousel"
 application.register("carousel", Carousel)
 
+import MapboxController from "./mapbox_controller.js"
+application.register("mapbox", MapboxController)
  

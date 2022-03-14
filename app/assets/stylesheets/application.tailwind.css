@@ -9,7 +9,8 @@
 @import "swiper/swiper-bundle";
 @import 'trix/dist/trix.css';
 @import 'actiontext.css';
-
+@import "mapbox-gl/dist/mapbox-gl";
+@import './components/map.css';
 
 /* Error modal used for custom error pages */
 .errormodal-back {
