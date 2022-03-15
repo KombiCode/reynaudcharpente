@@ -36,3 +36,5 @@ tailwind-full.config.js
 
 # ENV stuff
 .env 
+
+/config/credentials/production.key
