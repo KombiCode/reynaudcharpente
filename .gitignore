@@ -38,3 +38,5 @@ tailwind-full.config.js
 .env 
 
 /config/credentials/production.key
+
+/config/credentials/staging.key
