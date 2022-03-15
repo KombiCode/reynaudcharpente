@@ -2,7 +2,7 @@ class EmployeesController < ApplicationController
   before_action :set_breadcrumbs
 
   def index
-    @employees = Employee.all
+    @employees = Employee.with_attached_photo
     add_breadcrumb(t('breadcrumb_employees'))
   end
 
@@ -59,7 +59,7 @@ class EmployeesController < ApplicationController
   end
 
   def employee_params
-    params.require(:employee).permit(:name, :job_title, :about)
+    params.require(:employee).permit(:name, :job_title, :about, :photo)
   end
 
 end
