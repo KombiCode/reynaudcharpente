@@ -24,6 +24,12 @@
       <%= form.label :about, class: "label" %>
       <%= form.text_area :about, class: "input", rows: 6 %>
     </div>
+
+    <div class="form-item">
+      <%= form.label :photo %>
+      <%= form.file_field :photo, accept: "image/*" %>
+    </div>
+
   </div>
 
   <div class="flex items-center px-4 mt-6 rounded-b font-jost">
