@@ -45,6 +45,11 @@ a#CybotCookiebotDialogPoweredbyCybot,div#CybotCookiebotDialogPoweredByText {
   color: var(--cookie-active-color)!important;
 }
 
+/* Override hover for dialog buttons */
+.CybotCookiebotDialogBodyLevelButtonDescription:hover {
+  color: var(--cookie-active-color)!important;
+}
+
 /* Override icon svg color fill */
 #CookiebotWidget-widgetContent >
 div > div.CookiebotWidget-body >
