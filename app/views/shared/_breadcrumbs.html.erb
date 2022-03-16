@@ -4,7 +4,7 @@
       <% if breadcrumbs.count > 0 %>
         <li class="flex">
           <div class="flex items-center">
-            <a href="/" class="font-medium text-gray-500 hover:text-brandActive">
+            <a href="/" class="font-medium text-gray-500 brandHover">
               <%= t('home_page') %>
             </a>
           </div>
@@ -17,9 +17,9 @@
                   <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z"></path>
           </svg>
           <% if crumb.link? %>
-            <%= link_to crumb.name, crumb.path, class: "ml-4 font-medium text-gray-500 hover:text-brandActive" %>
+            <%= link_to crumb.name, crumb.path, class: "brandHover ml-4 font-medium text-gray-500" %>
           <% else %>
-            <span class="ml-4 font-semibold text-brandActive md:ml-2">
+            <span class="ml-4 font-medium text-brandActive md:ml-2">
               <%= crumb.name %>
             </span>
           <% end %>
