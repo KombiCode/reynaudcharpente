@@ -18,7 +18,7 @@ module.exports = {
         brandBrown: "#4c1212",
         socialFacebook: "#0f90f3",
         socialInstagram: "#d61e66",
-        brandActive: "#a1d02f"
+        brandActive: "#4c1212"
       },
       fontFamily: {
         akaya: "Akaya Telivigala",
