@@ -12,6 +12,10 @@
 @import "mapbox-gl/dist/mapbox-gl";
 @import './components/map.css';
 
+/* Our custom hover properties */
+.brandHover {
+  @apply hover:text-brandActive hover:font-medium;
+}
 /* Error modal used for custom error pages */
 .errormodal-back {
   @apply bg-gray-300;
