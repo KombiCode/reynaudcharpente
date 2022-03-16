@@ -4,7 +4,7 @@
   --cookie-grayed-color: #6b7280;
   --cookie-brandBrown-color: #4c1212;
   --cookie-brandGreen-color: #a1d02f;
-  --cookie-active-color: var(--cookie-brandGreen-color);
+  --cookie-active-color: var(--cookie-brandBrown-color);
 }
 
 /* Override font for whole dialog */
