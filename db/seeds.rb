@@ -12,6 +12,9 @@ Employee.destroy_all
 Skill.destroy_all
 Zipcode.destroy_all
 Activity.destroy_all
+Category.destroy_all
+Opinion.destroy_all
+Rating.destroy_all
 
 puts "Add employees"
 Employee.create(
@@ -118,5 +121,72 @@ Activity.create(
   name: "Auto Construction"
 )
 puts "#{Activity.count} activities have been created"
+
+puts "Add categories"
+cat1 = Category.create(
+  name: "Variété des qualifications"
+)
+cat2 = Category.create(
+  name: "Degré de réactivité"
+)
+cat3 = Category.create(
+  name: "Rapidité et efficacité"
+)
+cat4 = Category.create(
+  name: "Qualité du travail fourni"
+)
+cat5 = Category.create(
+  name: "Rapport qualité / prix"
+)
+cat6 = Category.create(
+  name: "Vous recommande"
+)
+puts "#{Category.count} categories have been created"
+
+puts "Add test opinion"
+op1 = Opinion.create(
+  title: "Réfection de couverture",
+  description: "Équipe dynamique, discrète et efficace.",
+  details: "Réfection d'une couverture toiture, changement des tuiles, rénovation de la zinguerie, rénovation de la gouttières, tuyau de descente, Habillage extérieur en barge épicéa, à CORENC",
+  control: "Avis contrôlé le 19/02/2021 par une pièce justificative",
+  realized_at: Date.new(2020, 9),
+  filed_at: Date.new(2020, 10, 27),
+  published_at: Date.new(2020, 10, 27),
+  reference: "JDM1558463"
+)
+puts "Test opinion created"
+
+puts "Add test ratings"
+Rating.create(
+  category_id: cat1,
+  opinion_id: op1,
+  note: 9
+)
+Rating.create(
+  category_id: cat2,
+  opinion_id: op1,
+  note: 9
+)
+Rating.create(
+  category_id: cat3,
+  opinion_id: op1,
+  note: 9
+)
+Rating.create(
+  category_id: cat4,
+  opinion_id: op1,
+  note: 9
+)
+Rating.create(
+  category_id: cat5,
+  opinion_id: op1,
+  note: 9
+)
+Rating.create(
+  category_id: cat6,
+  opinion_id: op1,
+  note: 10
+)
+puts "Ratings for test opinion added"
 
 puts "Database ready"
