@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_10_092614) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_18_083803) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -65,6 +65,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_10_092614) do
     t.index ["slug"], name: "index_activities_on_slug", unique: true
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "contacts", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -90,6 +96,30 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_10_092614) do
     t.datetime "updated_at", null: false
     t.enum "project_schedule", default: "midterm", enum_type: "project_schedule"
     t.index ["contact_id"], name: "index_messages_on_contact_id"
+  end
+
+  create_table "opinions", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.string "details"
+    t.string "control"
+    t.date "realized_at"
+    t.date "filed_at"
+    t.date "published_at"
+    t.string "reference"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["reference"], name: "index_opinions_on_reference"
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.bigint "opinion_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.decimal "note"
+    t.index ["category_id"], name: "index_ratings_on_category_id"
+    t.index ["opinion_id"], name: "index_ratings_on_opinion_id"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -119,4 +149,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_10_092614) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "messages", "contacts"
+  add_foreign_key "ratings", "categories"
+  add_foreign_key "ratings", "opinions"
 end

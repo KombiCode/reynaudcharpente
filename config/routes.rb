@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'opinions/index'
   root "static_pages#home"
 
   resources :contacts, only: [ :new, :create, :index ]

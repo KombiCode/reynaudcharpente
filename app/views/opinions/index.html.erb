@@ -1,0 +1,5 @@
+<div class="max-w-3xl mx-auto mt-8" data-controller="accordion">
+  <% @opinions.each do |opinion| %>
+    <%= render "opinion", opinion: opinion %>
+  <% end %>
+</div>
