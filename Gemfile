@@ -104,3 +104,4 @@ gem 'invisible_captcha'
 gem "aws-sdk-s3", require: false
 
 gem 'httparty', '~> 0.20.0'
+gem "sidekiq-cron", git: "https://github.com/citusdata/sidekiq-cron", branch: "hotfix/pipelining_depreciation"
