@@ -102,3 +102,5 @@ gem 'invisible_captcha'
 
 # Storage
 gem "aws-sdk-s3", require: false
+
+gem 'httparty', '~> 0.20.0'

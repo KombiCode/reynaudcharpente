@@ -77,10 +77,12 @@
       </div>
     </div>
     <div class="px-2">
-      <h2 class="text-xl font-bold truncate text-brandActive"><%= opinion.title %></h2>
+      <h2 class="text-lg font-bold text-brandActive"><%= opinion.title %></h2>
       <p class="pt-3 pb-1 text-base text-gray-600"><%= opinion.description %></p>
-      <p class="pt-3 text-base font-semibold text-gray-500">Détails de la prestation :</p>
-      <p class="text-base text-gray-700"><%= opinion.details %></p>
+      <% if !opinion.details.empty? %>
+        <p class="pt-3 text-base font-semibold text-gray-500">Détails de la prestation :</p>
+        <p class="text-base text-gray-700"><%= opinion.details %></p>
+      <% end %>
     </div>
     <div class="grid w-full grid-cols-2 gap-8 p-2 text-sm text-gray-700 border-t border-gray-200 md:grid-cols-4">
       <div class="flex items-center w-1/4">
