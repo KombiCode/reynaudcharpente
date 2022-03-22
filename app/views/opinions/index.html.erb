@@ -1,4 +1,35 @@
 <div class="max-w-5xl mx-auto mt-8" data-controller="accordion">
+  <div class="flex flex-col flex-wrap justify-center mb-2 md:flex-row">
+    <div class="p-2 text-center">
+      <%= image_tag "logo-acb-pqp.svg", alt: "Reynaud Charpente, spécialiste maison ossature bois", width: "180", height: "180", class: "inline-block" %>
+    </div>
+    <div class="flex flex-col items-center justify-center p-2 text-center font-jost">
+      <div class="mb-1">
+        <span class="float-left">
+          <i class="text-yellow-300 shadow-custom fas fa-star fa-2xl"></i>
+        </span>
+        <span class="ml-2 text-3xl font-bold"><%= @op_statistics.average %><small>/10</small>
+        </span>
+        <span class="text-xl italic font-semibold text-gray-600">(<%=@op_statistics.count%> avis)
+        </span>
+      </div>
+      <div class="flex flex-row flex-wrap mb-2">
+        <span class="w-20">
+          <%= image_tag "smiley-positive.svg", alt: "Reynaud Charpente, spécialiste maison ossature bois", width: "30", height: "30", class: "inline-block" %>
+          <div><%="#{@op_statistics.good_count} avis"%></div>
+        </span>
+        <span class="w-20">
+          <%= image_tag "smiley-neutral.svg", alt: "Reynaud Charpente, spécialiste maison ossature bois", width: "30", height: "30", class: "inline-block" %>
+          <div><%="#{@op_statistics.neutral_count} avis"%></div>
+        </span>
+        <span class="w-20">
+          <%= image_tag "smiley-negative.svg", alt: "Reynaud Charpente, spécialiste maison ossature bois", width: "30", height: "30", class: "inline-block" %>
+          <div><%="#{@op_statistics.bad_count} avis"%></div>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="py-4 text-2xl font-bold text-gray-600">Derniers avis</div>
   <% @opinions.each do |opinion| %>
     <div class="mb-8">
     <%= render "opinion", opinion: opinion %>
