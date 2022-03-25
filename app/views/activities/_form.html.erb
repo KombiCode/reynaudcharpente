@@ -27,6 +27,11 @@
     <%= form.rich_text_area :content, data: { controller: 'trix-youtube-plugin' } %>
   </div>
 
+  <div class="form-item">
+    <%= form.label :photos %>
+    <%= form.file_field :photos, accept: "image/*", multiple: true, direct_upload: true %>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>
