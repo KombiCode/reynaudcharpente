@@ -42,7 +42,7 @@ class ActivitiesController < ApplicationController
   end
 
   def activity_params
-    params.require(:activity).permit(:name, :description, :content)
+    params.require(:activity).permit(:name, :description, :content, photos: [])
   end  
 
   # def set_breadcrumbs

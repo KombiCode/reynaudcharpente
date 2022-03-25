@@ -8,81 +8,20 @@
                                       "fadeEffect": { "crossFade": true},
                                       "pagination": { "el": ".swiper-pagination", "type": "bullets"},
                                       "preloadImages": false,
-                                      "lazy": { "loadPrevNext": true } }'>
+                                      "lazy": { "loadPrevNext": true },
+                                      "zoom": { "maxRatio": 5 } }'>
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">
-        <picture>
-          <source srcset="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245803/KombiCode/ReynaudCharpente/HomePage/test_carousel_1_tfyhcv.webp"
-                  type="image/webp" >    
-          <source srcset="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245807/KombiCode/ReynaudCharpente/HomePage/test_carousel_1_vh2llo.jpg"
-                  type="image/jpg" >    
-          <img src="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245807/KombiCode/ReynaudCharpente/HomePage/test_carousel_1_vh2llo.jpg"
-              class="swiper-lazy" 
-              width=1600
-              height=1200
-              alt="Reynaud Charpente">
-          <div class="swiper-lazy-preloader"></div>
-        </picture>     
-      </div>
-      <div class="swiper-slide">
-        <picture>
-          <source srcset="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245820/KombiCode/ReynaudCharpente/HomePage/test_carousel_4_yawbkc.jpg"
-                  type="image/webp" >    
-          <source srcset="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245820/KombiCode/ReynaudCharpente/HomePage/test_carousel_4_yawbkc.jpg"
-                  type="image/jpg" >    
-          <img src="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245820/KombiCode/ReynaudCharpente/HomePage/test_carousel_4_yawbkc.jpg"
-              class="swiper-lazy" 
-              width=1600
-              height=1200
-              alt="Reynaud Charpente">
-          <div class="swiper-lazy-preloader"></div>
-        </picture>     
-      </div>
-      <div class="swiper-slide">
-        <picture>
-          <source srcset="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245805/KombiCode/ReynaudCharpente/HomePage/test_carousel_2_bdvtv3.webp"
-                  type="image/webp" >    
-          <source srcset="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245807/KombiCode/ReynaudCharpente/HomePage/test_carousel_2_lpnf1n.jpg"
-                  type="image/jpg" >    
-          <img src="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245807/KombiCode/ReynaudCharpente/HomePage/test_carousel_2_lpnf1n.jpg"
-              class="swiper-lazy" 
-              width=1600
-              height=1200
-              alt="Reynaud Charpente">
-          <div class="swiper-lazy-preloader"></div>
-        </picture>     
-      </div>
-      <div class="swiper-slide">
-        <picture>
-          <source srcset="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245809/KombiCode/ReynaudCharpente/HomePage/test_carousel_3_ytoxrm.webp"
-                  type="image/webp" >    
-          <source srcset="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245815/KombiCode/ReynaudCharpente/HomePage/test_carousel_3_qu0ptm.jpg"
-                  type="image/jpg" >    
-          <img src="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245815/KombiCode/ReynaudCharpente/HomePage/test_carousel_3_qu0ptm.jpg"
-              class="swiper-lazy" 
-              width=1600
-              height=1200
-              alt="Reynaud Charpente">
-          <div class="swiper-lazy-preloader"></div>
-        </picture>     
-      </div>
-      <div class="swiper-slide">
-        <picture>
-          <source srcset="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245820/KombiCode/ReynaudCharpente/HomePage/test_carousel_5_ayhnkj.webp"
-                  type="image/webp" >    
-          <source srcset="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245822/KombiCode/ReynaudCharpente/HomePage/test_carousel_5_ieqyyf.jpg"
-                  type="image/jpg" >    
-          <img src="https://res.cloudinary.com/dyeuxstgg/image/upload/c_fill,g_auto,h_350,w_970/b_rgb:000000/v1644245822/KombiCode/ReynaudCharpente/HomePage/test_carousel_5_ieqyyf.jpg"
-              class="swiper-lazy" 
-              width=1600
-              height=1200
-              alt="Reynaud Charpente">
-          <div class="swiper-lazy-preloader"></div>
-        </picture>     
-      </div>
-    </div>
+      <% @activities.each do |activity|%>
+        <% if activity.photos.attached? %>
+          <% activity.photos.each do |photo| %>
+            <div class="swiper-slide">
+              <%= image_tag photo.variant(resize_to_fill: [1500, 660], convert: :webp), class: "swiper-lazy" %>
+              <div class="swiper-lazy-preloader"></div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
