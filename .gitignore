@@ -40,3 +40,6 @@ tailwind-full.config.js
 /config/credentials/production.key
 
 /config/credentials/staging.key
+
+# fake data to feed Opinion and Rating
+/lib/tasks/add_fake_opinions.rake

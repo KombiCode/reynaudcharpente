@@ -31,4 +31,14 @@ class Opinion < ApplicationRecord
     rating_average >= 7.5
   end
 
+  def filter_rating
+    if good_rating
+      "good"
+    elsif neutral_rating
+      "neutral"
+    else
+      "bad"
+    end
+  end
+
 end
