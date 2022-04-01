@@ -30,4 +30,6 @@ application.register("carousel", Carousel)
 
 import MapboxController from "./mapbox_controller.js"
 application.register("mapbox", MapboxController)
- 
+
+import OpinionfilterController from "./opinionfilter_controller.js"
+application.register("opinionfilter", OpinionfilterController)
