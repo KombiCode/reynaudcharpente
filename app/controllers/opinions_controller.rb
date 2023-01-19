@@ -19,6 +19,6 @@ class OpinionsController < ApplicationController
         neutral_count += 1
       end
     end
-    OpinionsStatistics.new((sum / items_count).round(1), items_count, neutral_count, bad_count)
+    OpinionsStatistics.new((sum / items_count).round(1), items_count, neutral_count, bad_count) unless items_count == 0
   end
 end
