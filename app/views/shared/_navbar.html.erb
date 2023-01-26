@@ -4,8 +4,8 @@
     <a href="/" class="flex items-center my-2 mr-8">
       <%= image_tag "rc-logo-color.svg", alt: "Reynaud Charpente, spécialiste maison ossature bois", width: "80", height: "80", class: "content-center" %>
       <div class="grid grid-cols-1 grid-rows-2 px-2 font-light">
-        <span class="text-lg md:text-xl"><%=t('company_name') %></span>
-        <span class="text-sm md:text-base"><%=t('slogan') %></span>
+        <span class="text-xl font-medium md:text-2xl"><%=t('company_name') %></span>
+        <span class="text-sm font-medium md:text-lg"><%=t('slogan') %></span>
       </div>
     </a>
     <% if Rails.env == 'staging'%>
@@ -21,19 +21,19 @@
   <input class="hidden" type="checkbox" id="menu-toggle" />
   <div class="hidden w-full lg:flex lg:items-center lg:w-auto" id="menu">
     <nav>
-      <ul class="items-center justify-between pt-4 text-base font-light text-gray-500 lg:flex lg:pt-0">
+      <ul class="items-center justify-between pt-4 text-2xl font-normal text-gray-500 lg:flex lg:pt-0">
         <li>
-          <a class="block px-0 py-3 mr-8 text-xl transition ease-in-out border-b-2 border-transparent brandHover lg:p-4 duration-250" href="/news">
+          <a class="block px-0 py-3 mr-8 transition ease-in-out border-b-2 border-transparent brandHover lg:p-4 duration-250" href="/news">
             <%= t('news') %>
           </a>
         </li>
         <li>
-          <a class="block px-0 py-3 mr-8 text-xl transition ease-in-out border-b-2 border-transparent brandHover lg:p-4 duration-250" href="/achievements">
+          <a class="block px-0 py-3 mr-8 transition ease-in-out border-b-2 border-transparent brandHover lg:p-4 duration-250" href="/achievements">
             <%= t('achievements') %>
           </a>
         </li>
         <li>
-          <a class="block px-0 py-3 mr-8 text-xl transition ease-in-out border-b-2 border-transparent brandHover lg:p-4 duration-250" href="/opinions/index">
+          <a class="block px-0 py-3 mr-8 transition ease-in-out border-b-2 border-transparent brandHover lg:p-4 duration-250" href="/opinions/index">
             <%= t('opinions') %>
           </a>
         </li>
@@ -41,7 +41,7 @@
           <div class="relative" data-controller="dropdown">
             <div data-action="click->dropdown#toggle click@window->dropdown#hide"
                   data-dropdown-target="button" tabindex="0"
-                  class="flex items-center text-xl appearance-none select-none brandHover">
+                  class="flex items-center appearance-none select-none brandHover">
                 <%= t('company') %>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-4 h-4"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>
             </div>
@@ -49,17 +49,17 @@
               <div class="overflow-hidden bg-white border rounded shadow">
                 <%= link_to t('history'),  "/history",
                       data: {action: "click->dropdown#toggle"},
-                      class: 'brandHover block px-8 py-2 mb-1 text-xl text-gray-500
+                      class: 'brandHover block px-8 py-2 mb-1 text-gray-500
                               transition ease-in-out border-b-2 
                               lg:p-4 duration-250' %>
                 <%= link_to t('team'),  employees_path,
                       data: {action: "click->dropdown#toggle"},
-                      class: 'brandHover block px-8 py-2 mb-1 text-xl text-gray-500
+                      class: 'brandHover block px-8 py-2 mb-1 text-gray-500
                               transition ease-in-out  
                               lg:p-4 duration-250' %>
                 <%= link_to t('skills'), skills_path,
                       data: {action: "click->dropdown#toggle"},
-                      class: 'brandHover block px-8 py-2 mb-1 text-xl text-gray-500
+                      class: 'brandHover block px-8 py-2 mb-1 text-gray-500
                               transition ease-in-out  
                               lg:p-4 duration-250' %>
               </div>
@@ -73,7 +73,7 @@
         <span class="inline-flex rounded-md shadow-xs">
           <%= link_to "Contact", new_contact_path,
               data: { action: "click->extended-modal#open", remote: true },
-              class: "brandHover text-xl text-white inline-flex items-center px-0 md:px-4 py-2 leading-6 transition duration-150 ease-in-out bg-brandActive border border-transparent rounded-md hover:bg-white focus:outline-none" %>
+              class: "brandHover text-2xl text-white inline-flex items-center px-0 md:px-4 py-2 leading-6 transition duration-150 ease-in-out bg-brandActive border border-transparent rounded-md hover:bg-white focus:outline-none" %>
           <%= render 'contacts/modal' %>
         </span>
       </span>
