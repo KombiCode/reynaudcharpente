@@ -28,8 +28,13 @@ class OpinionScraper
         end
         # Retrieve dates and ref info
         footer_data = {}
-        footer_letf_items = avis.css('.pqp-footer-left').css('.pqp-footer-item')
+        footer_letf_items = avis.css('.footer-top').css('.pqp-footer-item')
         footer_letf_items.each do |item|
+          item_text = item.text.strip.split(" ")
+          footer_data[item_text[0]] = item_text[1]
+        end
+        footer_right_items = avis.css('.footer-bottom').css('.pqp-footer-item')
+        footer_right_items.each do |item|
           item_text = item.text.strip.split(" ")
           footer_data[item_text[0]] = item_text[1]
         end
